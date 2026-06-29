@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Saxenda (Liraglutida) · Bajar Peso</title>
-  <meta name="description" content="Saxenda (liraglutida 3 mg): primer agonista GLP-1 aprobado para obesidad. Tratamiento diario que controla el apetito y reduce la ingesta calórica."/>
+  <title data-i18n="tsax.page_title">Saxenda (Liraglutida) · Bajar Peso</title>
+  <meta name="description" content="Todo sobre Saxenda (liraglutida): dosis diaria, mecanismo de acción GLP-1, elegibilidad y resultados clínicos. Prescripción por médico español."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="../css/main.css"/>
@@ -19,11 +19,11 @@
 <main>
 <section class="page-hero">
   <div class="container">
-    <nav class="breadcrumb"><a href="../index.html">Inicio</a><span class="breadcrumb-sep">›</span><a href="tratamientos.html">Tratamientos</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Saxenda</span></nav>
+    <nav class="breadcrumb"><a href="../index.html" data-i18n="nav.home">Inicio</a><span class="breadcrumb-sep">›</span><a href="tratamientos.html" data-i18n="treatments.tag">Tratamientos</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Saxenda</span></nav>
     <div class="page-hero-content">
-      <div class="section-tag" style="background:rgba(163,75,91,0.1);border-color:rgba(163,75,91,0.4);color:#E57373"><span class="dot"></span><span data-i18n="tsax.tag">Agonista GLP-1 · Diario</span></div>
+      <div class="section-tag" style="background:rgba(255,190,156,0.1);border-color:rgba(255,190,156,0.3);color:var(--color-coral)"><span class="dot"></span><span data-i18n="tsax.tag">Agonista GLP-1 · Diario</span></div>
       <h1 data-i18n="tsax.hero_title">Saxenda <span style="font-weight:300;color: rgba(40,49,82,0.65)">· Liraglutida 3 mg</span></h1>
-      <p class="page-hero-subtitle">El primer agonista GLP-1 específicamente aprobado para la obesidad. Tratamiento diario que controla el hambre y reduce la ingesta calórica de forma sostenida.</p>
+      <p class="page-hero-subtitle" data-i18n="tsax.hero_desc">El primer agonista GLP-1 aprobado específicamente para la pérdida de peso corporal. Pauta de administración diaria inyectada subcutánea.</p>
       <a href="evaluacion.html" class="btn btn-primary" data-i18n="btn.eligible">Ver si soy elegible →</a>
     </div>
   </div>
@@ -32,71 +32,84 @@
 <section class="section-padding-sm">
   <div class="container">
     <div class="drug-detail">
+
+      <!-- SIDEBAR -->
       <div class="drug-sidebar">
         <div class="drug-card glass-card">
           <div class="drug-icon-large saxenda" style="background:white;padding:0.5rem;display:flex;align-items:center;justify-content:center;border-radius:12px;overflow:hidden">
             <img src="../assets/images/saxenda.png" alt="Saxenda" style="width:100%;height:100%;object-fit:cover"/>
           </div>
-          <div class="drug-name-large">Saxenda</div>
+          <div class="drug-name-large" data-i18n="treatments.saxenda_title">Saxenda</div>
           <div class="drug-generic">Liraglutida 3 mg · Novo Nordisk</div>
           <div class="drug-meta-list">
-            <div class="drug-meta-item"><span class="drug-meta-label">Mecanismo</span><span class="drug-meta-value">Agonista GLP-1</span></div>
-            <div class="drug-meta-item"><span class="drug-meta-label">Frecuencia</span><span class="drug-meta-value">Diaria</span></div>
-            <div class="drug-meta-item"><span class="drug-meta-label">Vía</span><span class="drug-meta-value">Subcutánea</span></div>
-            <div class="drug-meta-item"><span class="drug-meta-label">Dosis inicial</span><span class="drug-meta-value">0,6 mg/día</span></div>
-            <div class="drug-meta-item"><span class="drug-meta-label">Dosis máxima</span><span class="drug-meta-value">3 mg/día</span></div>
-            <div class="drug-meta-item"><span class="drug-meta-label">Aprobado AEMPS</span><span class="drug-meta-value" style="color:#81C784">✓ Sí</span></div>
-            <div class="drug-meta-item"><span class="drug-meta-label">Pérdida media</span><span class="drug-meta-value">5 – 10%</span></div>
+            <div class="drug-meta-item"><span class="drug-meta-label" data-i18n="drug_lbl.mechanism">Mecanismo</span><span class="drug-meta-value">Agonista GLP-1</span></div>
+            <div class="drug-meta-item"><span class="drug-meta-label" data-i18n="drug_lbl.frequency">Frecuencia</span><span class="drug-meta-value" data-i18n="drug_lbl.daily">Diaria</span></div>
+            <div class="drug-meta-item"><span class="drug-meta-label" data-i18n="drug_lbl.route">Vía</span><span class="drug-meta-value" data-i18n="drug_lbl.subcutaneous">Subcutánea</span></div>
+            <div class="drug-meta-item"><span class="drug-meta-label" data-i18n="drug_lbl.start_dose">Dosis inicial</span><span class="drug-meta-value" data-i18n="tsax.dose_start">0,6 mg/día</span></div>
+            <div class="drug-meta-item"><span class="drug-meta-label" data-i18n="drug_lbl.max_dose">Dosis máxima</span><span class="drug-meta-value" data-i18n="tsax.dose_max">3,0 mg/día</span></div>
+            <div class="drug-meta-item"><span class="drug-meta-label" data-i18n="drug_lbl.aemps">Aprobado AEMPS</span><span class="drug-meta-value" style="color:#81C784" data-i18n="drug_lbl.yes_val">✓ Sí</span></div>
+            <div class="drug-meta-item"><span class="drug-meta-label" data-i18n="drug_lbl.avg_loss">Pérdida media</span><span class="drug-meta-value">5 – 10%</span></div>
           </div>
-          <a href="evaluacion.html" class="btn btn-primary" style="width:100%;justify-content:center">Iniciar evaluación</a>
+          <a href="evaluacion.html" class="btn btn-primary" style="width:100%;justify-content:center" data-i18n="drug_lbl.prescription_btn">Iniciar evaluación</a>
         </div>
-        <div class="alert alert-warning"><span>⚠️</span><span style="font-size:0.8rem">Requiere prescripción médica obligatoria. Uso diario (no semanal).</span></div>
+        <div class="alert alert-warning">
+          <span>⚠️</span>
+          <span style="font-size:0.8rem" data-i18n="tsax.warning">Saxenda requiere prescripción médica obligatoria en España. No está disponible sin receta.</span>
+        </div>
       </div>
 
+      <!-- MAIN CONTENT -->
       <div class="drug-main">
         <div>
-          <div class="drug-section-title">¿Qué es Saxenda?</div>
-          <p class="drug-text">Saxenda (liraglutida 3 mg) fue el primer agonista GLP-1 aprobado específicamente para el tratamiento de la obesidad, precediendo a Wegovy y Mounjaro. Aunque su eficacia es algo menor que los tratamientos semanales más modernos, sigue siendo una opción válida y efectiva, especialmente para pacientes que prefieren una dosis diaria controlable o no toleran otros tratamientos.</p>
-          <p class="drug-text">A diferencia de Ozempic (también liraglutida, pero a 1,8 mg para diabetes), Saxenda se administra a la dosis máxima de 3 mg diarios, lo que maximiza su efecto sobre el peso.</p>
+          <div class="drug-section-title" data-i18n="tsax.what_is_title">¿Qué es Saxenda?</div>
+          <p class="drug-text" data-i18n="tsax.what_is_desc1">Saxenda es un inyectable diario de liraglutida (3 mg) de Novo Nordisk. Fue pionero en recibir la aprobación específica para el tratamiento del sobrepeso y la obesidad en pacientes adultos, sirviendo de base clínica para los modernos tratamientos GLP-1.</p>
+          <p class="drug-text" data-i18n="tsax.what_is_desc2">Ayuda a los pacientes a mantener una ingesta de comida inferior mediante la regulación directa de la sensación de saciedad y hambre en el cerebro día a día.</p>
         </div>
         <div>
-          <div class="drug-section-title">Resultados clínicos (SCALE Obesity)</div>
+          <div class="drug-section-title" data-i18n="drug_title.how_works">Cómo funciona</div>
+          <ul class="drug-list">
+            <li data-i18n="tsax.how1">Imita el péptido similar al glucagón 1 natural, regulando el hambre</li>
+            <li data-i18n="tsax.how2">Enlentece el vaciamiento del estómago para prolongar la digestión y saciedad diaria</li>
+            <li data-i18n="tsax.how3">Su formato diario permite detener el tratamiento de forma inmediata ante intolerancias</li>
+          </ul>
+        </div>
+        <div>
+          <div class="drug-section-title" data-i18n="tsax.results_title">Resultados clínicos (SCALE)</div>
           <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem">
-            <div class="glass-card" style="padding:1.25rem;text-align:center"><div style="font-size:1.75rem;font-weight:800;color:#E57373">8%</div><div style="font-size:0.8rem;color: rgba(40,49,82,0.65);margin-top:4px">pérdida media de peso</div></div>
-            <div class="glass-card" style="padding:1.25rem;text-align:center"><div style="font-size:1.75rem;font-weight:800;color:#E57373">63%</div><div style="font-size:0.8rem;color: rgba(40,49,82,0.65);margin-top:4px">pérdida ≥5% del peso</div></div>
-            <div class="glass-card" style="padding:1.25rem;text-align:center"><div style="font-size:1.75rem;font-weight:800;color:#E57373">56 sem</div><div style="font-size:0.8rem;color: rgba(40,49,82,0.65);margin-top:4px">duración del ensayo</div></div>
+            <div class="glass-card" style="padding:1.25rem;text-align:center"><div style="font-size:1.75rem;font-weight:800;color:var(--color-coral)">9%</div><div style="font-size:0.8rem;color: rgba(40,49,82,0.65);margin-top:4px" data-i18n="tsax.results_stat1">pérdida media de peso corporal</div></div>
+            <div class="glass-card" style="padding:1.25rem;text-align:center"><div style="font-size:1.75rem;font-weight:800;color:var(--color-coral)">63%</div><div style="font-size:0.8rem;color: rgba(40,49,82,0.65);margin-top:4px" data-i18n="tsax.results_stat2">de pacientes perdieron ≥5% del peso</div></div>
+            <div class="glass-card" style="padding:1.25rem;text-align:center"><div style="font-size:1.75rem;font-weight:800;color:var(--color-coral)" data-i18n="tsax.trial_duration">56 sem</div><div style="font-size:0.8rem;color: rgba(40,49,82,0.65);margin-top:4px" data-i18n="tsax.results_stat3">duración del estudio principal</div></div>
           </div>
         </div>
         <div>
-          <div class="drug-section-title">Pauta de dosificación (escalada gradual)</div>
+          <div class="drug-section-title" data-i18n="drug_title.eligibility">¿Quién puede usarlo? (Elegibilidad AEMPS)</div>
+          <ul class="drug-list">
+            <li data-i18n="tsax.elig1">Adultos con IMC ≥ 30 (o IMC ≥ 27 con al menos una patología asociada)</li>
+            <li data-i18n="tsax.elig2">Adolescentes de 12 a 17 años con peso superior a 60 kg y obesidad severa</li>
+          </ul>
+        </div>
+        <div>
+          <div class="drug-section-title" data-i18n="drug_title.dosing">Pauta de dosificación</div>
           <div style="display:flex;flex-direction:column;gap:0.75rem">
-            <div style="display:flex;justify-content:space-between;padding:1rem;background:rgba(255,255,255,0.06);border-radius:8px;font-size:0.875rem"><span>Semana 1</span><strong>0,6 mg/día</strong></div>
-            <div style="display:flex;justify-content:space-between;padding:1rem;background:rgba(255,255,255,0.06);border-radius:8px;font-size:0.875rem"><span>Semana 2</span><strong>1,2 mg/día</strong></div>
-            <div style="display:flex;justify-content:space-between;padding:1rem;background:rgba(255,255,255,0.06);border-radius:8px;font-size:0.875rem"><span>Semana 3</span><strong>1,8 mg/día</strong></div>
-            <div style="display:flex;justify-content:space-between;padding:1rem;background:rgba(255,255,255,0.06);border-radius:8px;font-size:0.875rem"><span>Semana 4</span><strong>2,4 mg/día</strong></div>
-            <div style="display:flex;justify-content:space-between;padding:1rem;background:rgba(163,75,91,0.15);border:1px solid rgba(163,75,91,0.3);border-radius:8px;font-size:0.875rem"><span>Semana 5+ (mantenimiento)</span><strong>3 mg/día</strong></div>
+            <div style="display:flex;justify-content:space-between;padding:1rem;background:rgba(255,255,255,0.06);border-radius:8px;font-size:0.875rem"><span data-i18n="tsax.dose_w1_label">Semana 1</span><strong data-i18n="tsax.dose_w1_val">0,6 mg/día</strong></div>
+            <div style="display:flex;justify-content:space-between;padding:1rem;background:rgba(255,255,255,0.06);border-radius:8px;font-size:0.875rem"><span data-i18n="tsax.dose_w2_label">Semana 2</span><strong data-i18n="tsax.dose_w2_val">1,2 mg/día</strong></div>
+            <div style="display:flex;justify-content:space-between;padding:1rem;background:rgba(255,255,255,0.06);border-radius:8px;font-size:0.875rem"><span data-i18n="tsax.dose_w3_label">Semana 3</span><strong data-i18n="tsax.dose_w3_val">1,8 mg/día</strong></div>
+            <div style="display:flex;justify-content:space-between;padding:1rem;background:rgba(255,255,255,0.06);border-radius:8px;font-size:0.875rem"><span data-i18n="tsax.dose_w4_label">Semana 4</span><strong data-i18n="tsax.dose_w4_val">2,4 mg/día</strong></div>
+            <div style="display:flex;justify-content:space-between;padding:1rem;background:rgba(255,190,156,0.15);border:1px solid rgba(255,190,156,0.3);border-radius:8px;font-size:0.875rem"><span data-i18n="tsax.dose_w5_plus_label">Semana 5+ (mantenimiento)</span><strong data-i18n="tsax.dose_w5_plus_val">3,0 mg/día</strong></div>
           </div>
+          <p style="font-size:0.8rem;color: rgba(40,49,82,0.55);margin-top:0.75rem" data-i18n="drug_lbl.dose_custom_desc">El médico determinará la dosis óptima en función de tu respuesta y tolerancia.</p>
         </div>
         <div>
-          <div class="drug-section-title">Ventajas del uso diario</div>
+          <div class="drug-section-title" data-i18n="drug_title.side_effects">Efectos secundarios más frecuentes</div>
           <ul class="drug-list">
-            <li>Mayor flexibilidad en la gestión de efectos secundarios gastrointestinales (se puede omitir o ajustar una dosis)</li>
-            <li>Ideal para pacientes que prefieren dosis más pequeñas y frecuentes</li>
-            <li>Permite percibir el efecto del medicamento de forma más continua</li>
+            <li data-i18n="tsax.side1">Náuseas transitorias en la escalada semanal</li>
+            <li data-i18n="tsax.side2">Diarrea, estreñimiento o ardor de estómago</li>
+            <li data-i18n="tsax.side3">Fatiga o dolor de cabeza leve</li>
           </ul>
         </div>
-        <div>
-          <div class="drug-section-title">Efectos secundarios más frecuentes</div>
-          <ul class="drug-list">
-            <li>Náuseas (especialmente en las primeras semanas)</li>
-            <li>Diarrea</li>
-            <li>Estreñimiento</li>
-            <li>Vómitos</li>
-            <li>Hipoglucemia (solo en combinación con otros antidiabéticos)</li>
-          </ul>
-        </div>
-        <a href="evaluacion.html" class="btn btn-primary" style="width:fit-content;font-size:1rem;padding:0.875rem 2rem">Comprobar mi elegibilidad →</a>
+        <a href="evaluacion.html" class="btn btn-primary" style="width:fit-content;font-size:1rem;padding:0.875rem 2rem" data-i18n="drug_lbl.check_eligibility">Comprobar mi elegibilidad →</a>
       </div>
+
     </div>
   </div>
 </section>

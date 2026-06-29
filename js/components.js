@@ -141,7 +141,7 @@
     '          <a href="' + BP + 'pages/contacto.html"       class="footer-link" data-i18n="footer.contact">Contacto</a>',
     '        </div>',
     '        <div class="footer-col-title mt-6" data-i18n="footer.medical">Médico Responsable</div>',
-    '        <div class="footer-links"><p class="footer-link text-white-60" style="cursor:default">Dr. [Nombre Médico]<br/>Médico Colegiado nº 292913499 (Málaga)<br/>Medicina General y Regenerativa</p></div>',
+    '        <div class="footer-links"><p class="footer-link text-white-60" style="cursor:default" data-i18n-html="footer.medical_info">Dr. [Nombre Médico]<br/>Médico Colegiado nº 292913499 (Málaga)<br/>Medicina General y Regenerativa</p></div>',
     '      </div>',
     '      <div class="footer-col">',
     '        <div class="footer-col-title" data-i18n="footer.legal">Legal</div>',

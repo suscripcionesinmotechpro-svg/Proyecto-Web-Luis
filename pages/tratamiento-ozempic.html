@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ozempic (Semaglutida) · Bajar Peso</title>
-  <meta name="description" content="Ozempic (semaglutida): tratamiento semanal que mejora el control glucémico y favorece la pérdida de peso. Prescripción médica online en España."/>
+  <title data-i18n="to.page_title">Ozempic (Semaglutida) · Bajar Peso</title>
+  <meta name="description" content="Ozempic (semaglutida 0,5/1 mg): tratamiento semanal que mejora el control glucémico y favorece la pérdida de peso. Consulta elegibilidad y dosis."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="../css/main.css"/>
@@ -19,11 +19,11 @@
 <main>
 <section class="page-hero">
   <div class="container">
-    <nav class="breadcrumb"><a href="../index.html">Inicio</a><span class="breadcrumb-sep">›</span><a href="tratamientos.html">Tratamientos</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Ozempic</span></nav>
+    <nav class="breadcrumb"><a href="../index.html" data-i18n="nav.home">Inicio</a><span class="breadcrumb-sep">›</span><a href="tratamientos.html" data-i18n="treatments.tag">Tratamientos</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Ozempic</span></nav>
     <div class="page-hero-content">
-      <div class="section-tag" style="background:rgba(75,163,91,0.1);border-color:rgba(75,163,91,0.4);color:#81C784"><span class="dot"></span><span data-i18n="to.tag">Agonista GLP-1</span></div>
+      <div class="section-tag" style="background:rgba(129,199,132,0.15);border-color:rgba(129,199,132,0.3);color:#81C784"><span class="dot"></span><span data-i18n="to.tag">Agonista GLP-1</span></div>
       <h1 data-i18n="to.hero_title">Ozempic <span style="font-weight:300;color: rgba(40,49,82,0.65)">· Semaglutida 0,5 / 1 mg</span></h1>
-      <p class="page-hero-subtitle">Tratamiento semanal que mejora el control glucémico y favorece la pérdida de peso progresiva y sostenida. Amplio historial de seguridad y eficacia.</p>
+      <p class="page-hero-subtitle" data-i18n="to.hero_desc">Tratamiento semanal que mejora el control glucémico y favorece la pérdida de peso de forma progresiva. Ampliamente prescrito en toda España.</p>
       <a href="evaluacion.html" class="btn btn-primary" data-i18n="btn.eligible">Ver si soy elegible →</a>
     </div>
   </div>
@@ -32,60 +32,82 @@
 <section class="section-padding-sm">
   <div class="container">
     <div class="drug-detail">
+
+      <!-- SIDEBAR -->
       <div class="drug-sidebar">
         <div class="drug-card glass-card">
           <div class="drug-icon-large ozempic" style="background:white;padding:0.5rem;display:flex;align-items:center;justify-content:center;border-radius:12px;overflow:hidden">
             <img src="../assets/images/ozempic.png" alt="Ozempic" style="width:100%;height:100%;object-fit:cover"/>
           </div>
-          <div class="drug-name-large">Ozempic</div>
+          <div class="drug-name-large" data-i18n="treatments.ozempic_title">Ozempic</div>
           <div class="drug-generic">Semaglutida 0,5/1 mg · Novo Nordisk</div>
           <div class="drug-meta-list">
-            <div class="drug-meta-item"><span class="drug-meta-label">Mecanismo</span><span class="drug-meta-value">Agonista GLP-1</span></div>
-            <div class="drug-meta-item"><span class="drug-meta-label">Frecuencia</span><span class="drug-meta-value">Semanal</span></div>
-            <div class="drug-meta-item"><span class="drug-meta-label">Vía</span><span class="drug-meta-value">Subcutánea</span></div>
-            <div class="drug-meta-item"><span class="drug-meta-label">Dosis inicial</span><span class="drug-meta-value">0,25 mg/semana</span></div>
-            <div class="drug-meta-item"><span class="drug-meta-label">Dosis máxima</span><span class="drug-meta-value">1 mg/semana</span></div>
-            <div class="drug-meta-item"><span class="drug-meta-label">Aprobado AEMPS</span><span class="drug-meta-value" style="color:#81C784">✓ Sí</span></div>
-            <div class="drug-meta-item"><span class="drug-meta-label">Pérdida media</span><span class="drug-meta-value">8 – 14%</span></div>
+            <div class="drug-meta-item"><span class="drug-meta-label" data-i18n="drug_lbl.mechanism">Mecanismo</span><span class="drug-meta-value">Agonista GLP-1</span></div>
+            <div class="drug-meta-item"><span class="drug-meta-label" data-i18n="drug_lbl.frequency">Frecuencia</span><span class="drug-meta-value" data-i18n="drug_lbl.weekly">Semanal</span></div>
+            <div class="drug-meta-item"><span class="drug-meta-label" data-i18n="drug_lbl.route">Vía</span><span class="drug-meta-value" data-i18n="drug_lbl.subcutaneous">Subcutánea</span></div>
+            <div class="drug-meta-item"><span class="drug-meta-label" data-i18n="drug_lbl.start_dose">Dosis inicial</span><span class="drug-meta-value" data-i18n="to.dose_start">0,25 mg/semana</span></div>
+            <div class="drug-meta-item"><span class="drug-meta-label" data-i18n="drug_lbl.max_dose">Dosis máxima</span><span class="drug-meta-value" data-i18n="to.dose_max">1,0 mg/semana</span></div>
+            <div class="drug-meta-item"><span class="drug-meta-label" data-i18n="drug_lbl.aemps">Aprobado AEMPS</span><span class="drug-meta-value" style="color:#81C784" data-i18n="drug_lbl.yes_val">✓ Sí</span></div>
+            <div class="drug-meta-item"><span class="drug-meta-label" data-i18n="drug_lbl.avg_loss">Pérdida media</span><span class="drug-meta-value">8 – 14%</span></div>
           </div>
-          <a href="evaluacion.html" class="btn btn-primary" style="width:100%;justify-content:center">Iniciar evaluación</a>
+          <a href="evaluacion.html" class="btn btn-primary" style="width:100%;justify-content:center" data-i18n="drug_lbl.prescription_btn">Iniciar evaluación</a>
         </div>
-        <div class="alert alert-warning"><span>⚠️</span><span style="font-size:0.8rem">Requiere prescripción médica obligatoria.</span></div>
+        <div class="alert alert-warning">
+          <span>⚠️</span>
+          <span style="font-size:0.8rem" data-i18n="to.warning">Ozempic requiere prescripción médica obligatoria en España. No está disponible sin receta.</span>
+        </div>
       </div>
 
+      <!-- MAIN CONTENT -->
       <div class="drug-main">
         <div>
-          <div class="drug-section-title">¿Qué es Ozempic?</div>
-          <p class="drug-text">Ozempic (semaglutida) fue aprobado originalmente para el tratamiento de la diabetes tipo 2, pero sus marcados efectos en la reducción del peso lo han convertido en uno de los tratamientos más utilizados en el campo de la obesidad. Comparte el mismo principio activo (semaglutida) que Wegovy, aunque a dosis menores.</p>
-          <p class="drug-text">Su amplio perfil de seguridad, respaldado por años de uso en pacientes diabéticos y por estudios cardiovasculares de gran tamaño (SUSTAIN, LEADER), lo hacen especialmente adecuado para pacientes con comorbilidades metabólicas.</p>
+          <div class="drug-section-title" data-i18n="to.what_is_title">¿Qué es Ozempic?</div>
+          <p class="drug-text" data-i18n="to.what_is_desc1">Ozempic es un medicamento semanal inyectable de Novo Nordisk. Contiene el principio activo semaglutida, y aunque su aprobación inicial fue para el tratamiento de la diabetes tipo 2, se prescribe de forma extendida (Off-label) para el tratamiento metabólico y la pérdida de peso corporal debido a sus grandes resultados.</p>
+          <p class="drug-text" data-i18n="to.what_is_desc2">Ayuda a reducir significativamente la ingesta calórica al ralentizar la digestión y mandar señales de saciedad al cerebro de forma prolongada durante toda la semana.</p>
         </div>
         <div>
-          <div class="drug-section-title">Resultados clínicos</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem">
-            <div class="glass-card" style="padding:1.25rem;text-align:center"><div style="font-size:1.75rem;font-weight:800;color:#81C784">14%</div><div style="font-size:0.8rem;color: rgba(40,49,82,0.65);margin-top:4px">pérdida media a 1 mg</div></div>
-            <div class="glass-card" style="padding:1.25rem;text-align:center"><div style="font-size:1.75rem;font-weight:800;color:#81C784">74%</div><div style="font-size:0.8rem;color: rgba(40,49,82,0.65);margin-top:4px">pérdida ≥5% del peso</div></div>
-            <div class="glass-card" style="padding:1.25rem;text-align:center"><div style="font-size:1.75rem;font-weight:800;color:#81C784">↓26%</div><div style="font-size:0.8rem;color: rgba(40,49,82,0.65);margin-top:4px">riesgo cardiovascular</div></div>
-          </div>
-        </div>
-        <div>
-          <div class="drug-section-title">Pauta de dosificación</div>
-          <div style="display:flex;flex-direction:column;gap:0.75rem">
-            <div style="display:flex;justify-content:space-between;padding:1rem;background:rgba(255,255,255,0.06);border-radius:8px;font-size:0.875rem"><span>Semanas 1–4</span><strong>0,25 mg/sem</strong></div>
-            <div style="display:flex;justify-content:space-between;padding:1rem;background:rgba(255,255,255,0.06);border-radius:8px;font-size:0.875rem"><span>Semanas 5–8</span><strong>0,5 mg/sem</strong></div>
-            <div style="display:flex;justify-content:space-between;padding:1rem;background:rgba(75,163,91,0.15);border:1px solid rgba(75,163,91,0.3);border-radius:8px;font-size:0.875rem"><span>Semana 9+ (si se precisa)</span><strong>1 mg/sem</strong></div>
-          </div>
-        </div>
-        <div>
-          <div class="drug-section-title">Efectos secundarios más frecuentes</div>
+          <div class="drug-section-title" data-i18n="drug_title.how_works">Cómo funciona</div>
           <ul class="drug-list">
-            <li>Náuseas (generalmente leves y transitorias)</li>
-            <li>Diarrea o estreñimiento</li>
-            <li>Vómitos ocasionales</li>
-            <li>Reducción notable del apetito</li>
+            <li data-i18n="to.how1">Imita la hormona incretina GLP-1 reduciendo los niveles de apetito</li>
+            <li data-i18n="to.how2">Regula el azúcar en sangre y optimiza la secreción de insulina</li>
+            <li data-i18n="to.how3">Prolonga la digestión para que te sientas satisfecho con porciones más pequeñas</li>
           </ul>
         </div>
-        <a href="evaluacion.html" class="btn btn-primary" style="width:fit-content;font-size:1rem;padding:0.875rem 2rem">Comprobar mi elegibilidad →</a>
+        <div>
+          <div class="drug-section-title" data-i18n="to.results_title">Resultados clínicos (SUSTAIN)</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem">
+            <div class="glass-card" style="padding:1.25rem;text-align:center"><div style="font-size:1.75rem;font-weight:800;color:var(--color-coral)">12%</div><div style="font-size:0.8rem;color: rgba(40,49,82,0.65);margin-top:4px" data-i18n="to.results_stat1">reducción media de grasa corporal</div></div>
+            <div class="glass-card" style="padding:1.25rem;text-align:center"><div style="font-size:1.75rem;font-weight:800;color:var(--color-coral)">80%</div><div style="font-size:0.8rem;color: rgba(40,49,82,0.65);margin-top:4px" data-i18n="to.results_stat2">de pacientes lograron control metabólico óptimo</div></div>
+            <div class="glass-card" style="padding:1.25rem;text-align:center"><div style="font-size:1.75rem;font-weight:800;color:var(--color-coral)" data-i18n="to.trial_duration">56 sem</div><div style="font-size:0.8rem;color: rgba(40,49,82,0.65);margin-top:4px" data-i18n="to.results_stat3">duración del estudio principal</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="drug-section-title" data-i18n="drug_title.eligibility">¿Quién puede usarlo? (Elegibilidad AEMPS)</div>
+          <ul class="drug-list">
+            <li data-i18n="to.elig1">Adultos con problemas de regulación de glucosa y sobrepeso u obesidad</li>
+            <li data-i18n="to.elig2">Adultos que requieran mejorar su perfil de riesgo cardiovascular y metabólico</li>
+          </ul>
+        </div>
+        <div>
+          <div class="drug-section-title" data-i18n="drug_title.dosing">Pauta de dosificación</div>
+          <div style="display:flex;flex-direction:column;gap:0.75rem">
+            <div style="display:flex;justify-content:space-between;padding:1rem;background:rgba(255,255,255,0.06);border-radius:8px;font-size:0.875rem"><span data-i18n="drug_lbl.dose_weeks_1_4">Semanas 1–4</span><strong data-i18n="to.dose_w1_4_val">0,25 mg/sem</strong></div>
+            <div style="display:flex;justify-content:space-between;padding:1rem;background:rgba(255,255,255,0.06);border-radius:8px;font-size:0.875rem"><span data-i18n="drug_lbl.dose_weeks_5_8">Semanas 5–8</span><strong data-i18n="to.dose_w5_8_val">0,5 mg/sem</strong></div>
+            <div style="display:flex;justify-content:space-between;padding:1rem;background:rgba(255,255,255,0.06);border-radius:8px;font-size:0.875rem"><span data-i18n="to.dose_w9_plus_label">Semana 9+ (mantenimiento)</span><strong data-i18n="to.dose_w9_plus_val">1,0 mg/sem</strong></div>
+          </div>
+          <p style="font-size:0.8rem;color: rgba(40,49,82,0.55);margin-top:0.75rem" data-i18n="drug_lbl.dose_custom_desc">El médico determinará la dosis óptima en función de tu respuesta y tolerancia.</p>
+        </div>
+        <div>
+          <div class="drug-section-title" data-i18n="drug_title.side_effects">Efectos secundarios más frecuentes</div>
+          <ul class="drug-list">
+            <li data-i18n="to.side1">Náuseas leves durante la fase de inicio</li>
+            <li data-i18n="to.side2">Molestias digestivas o estreñimiento</li>
+            <li data-i18n="to.side3">Disminución del apetito</li>
+          </ul>
+        </div>
+        <a href="evaluacion.html" class="btn btn-primary" style="width:fit-content;font-size:1rem;padding:0.875rem 2rem" data-i18n="drug_lbl.check_eligibility">Comprobar mi elegibilidad →</a>
       </div>
+
     </div>
   </div>
 </section>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contacto · Bajar Peso</title>
+  <title data-i18n="contact.page_title">Contacto · Bajar Peso</title>
   <meta name="description" content="Contacta con Bajar Peso. Resolvemos tus dudas sobre los tratamientos GLP-1 y el proceso de consulta médica online."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
@@ -21,8 +21,8 @@
   <div class="container">
     <div class="page-hero-content">
       <div class="section-tag"><span class="dot"></span><span data-i18n="footer.contact">Contacto</span></div>
-      <h1>Estamos aquí para ayudarte</h1>
-      <p class="page-hero-subtitle">¿Tienes dudas antes de iniciar tu evaluación? Nuestro equipo responde en menos de 24 horas en días hábiles.</p>
+      <h1 data-i18n="contact.hero_title">Estamos aquí para ayudarte</h1>
+      <p class="page-hero-subtitle" data-i18n="contact.hero_subtitle">¿Tienes dudas antes de iniciar tu evaluación? Nuestro equipo responde en menos de 24 horas en días hábiles.</p>
     </div>
   </div>
 </section>
@@ -31,55 +31,55 @@
   <div class="container">
     <div class="contact-grid">
       <div class="contact-info">
-        <div class="section-tag" style="margin-bottom:0.5rem"><span class="dot"></span><span>Canales de contacto</span></div>
-        <h2 style="font-size:1.75rem">Hablemos</h2>
-        <p class="text-p3 text-white-60">Recuerda que las consultas médicas sobre tu tratamiento debes realizarlas a través de la plataforma de pacientes, no por correo general.</p>
+        <div class="section-tag" style="margin-bottom:0.5rem"><span class="dot"></span><span data-i18n="contact.channels_tag">Canales de contacto</span></div>
+        <h2 style="font-size:1.75rem" data-i18n="contact.title">Hablemos</h2>
+        <p class="text-p3 text-white-60" data-i18n="contact.desc">Recuerda que las consultas médicas sobre tu tratamiento debes realizarlas a través de la plataforma de pacientes, no por correo general.</p>
 
-        <div class="contact-item"><div class="contact-item-icon">📧</div><div class="contact-item-text"><div class="contact-item-label">Email general</div><div class="contact-item-value">info@bajarpeso.es</div></div></div>
-        <div class="contact-item"><div class="contact-item-icon">💬</div><div class="contact-item-text"><div class="contact-item-label">WhatsApp (no consultas médicas)</div><div class="contact-item-value">+34 6XX XXX XXX</div></div></div>
-        <div class="contact-item"><div class="contact-item-icon">🕐</div><div class="contact-item-text"><div class="contact-item-label">Horario de atención</div><div class="contact-item-value">Lunes – Viernes, 9:00 – 18:00</div></div></div>
-        <div class="contact-item"><div class="contact-item-icon">⚕️</div><div class="contact-item-text"><div class="contact-item-label">Consultas médicas urgentes</div><div class="contact-item-value">A través del portal de pacientes</div></div></div>
+        <div class="contact-item"><div class="contact-item-icon">📧</div><div class="contact-item-text"><div class="contact-item-label" data-i18n="contact.label_email">Email general</div><div class="contact-item-value">info@bajarpeso.es</div></div></div>
+        <div class="contact-item"><div class="contact-item-icon">💬</div><div class="contact-item-text"><div class="contact-item-label" data-i18n="contact.label_wa">WhatsApp (no consultas médicas)</div><div class="contact-item-value">+34 6XX XXX XXX</div></div></div>
+        <div class="contact-item"><div class="contact-item-icon">🕐</div><div class="contact-item-text"><div class="contact-item-label" data-i18n="contact.label_hours">Horario de atención</div><div class="contact-item-value" data-i18n="contact.val_hours">Lunes – Viernes, 9:00 – 18:00</div></div></div>
+        <div class="contact-item"><div class="contact-item-icon">⚕️</div><div class="contact-item-text"><div class="contact-item-label" data-i18n="contact.label_urgent">Consultas médicas urgentes</div><div class="contact-item-value" data-i18n="contact.val_urgent">A través del portal de pacientes</div></div></div>
 
         <div class="alert alert-warning">
           <span>⚠️</span>
-          <div style="font-size:0.85rem"><strong>Nota importante:</strong> Este canal de contacto es solo para consultas generales y administrativas. Si tienes una urgencia médica, llama al <strong>112</strong>. Las consultas sobre tu tratamiento se gestionan exclusivamente a través del portal de pacientes.</div>
+          <div style="font-size:0.85rem" data-i18n-html="contact.warning_text"><strong>Nota importante:</strong> Este canal de contacto es solo para consultas generales y administrativas. Si tienes una urgencia médica, llama al <strong>112</strong>. Las consultas sobre tu tratamiento se gestionan exclusivamente a través del portal de pacientes.</div>
         </div>
       </div>
 
       <form class="contact-form" id="contactForm" novalidate>
-        <div class="form-section-title">Envíanos un mensaje</div>
+        <div class="form-section-title" data-i18n="contact.form_title">Envíanos un mensaje</div>
         <div class="form-row">
           <div class="input-group">
-            <label class="input-label" for="ctName">Nombre</label>
-            <input type="text" id="ctName" class="input-field" placeholder="Tu nombre" required/>
+            <label class="input-label" for="ctName" data-i18n="contact.form_name">Nombre</label>
+            <input type="text" id="ctName" class="input-field" data-i18n-placeholder="contact.form_name_placeholder" placeholder="Tu nombre" required/>
           </div>
           <div class="input-group">
-            <label class="input-label" for="ctEmail">Email</label>
-            <input type="email" id="ctEmail" class="input-field" placeholder="tu@email.com" required/>
+            <label class="input-label" for="ctEmail" data-i18n="contact.form_email">Email</label>
+            <input type="email" id="ctEmail" class="input-field" data-i18n-placeholder="contact.form_email_placeholder" placeholder="tu@email.com" required/>
           </div>
         </div>
         <div class="input-group">
-          <label class="input-label" for="ctSubject">Asunto</label>
+          <label class="input-label" for="ctSubject" data-i18n="contact.form_subject">Asunto</label>
           <select id="ctSubject" class="input-field" style="appearance:auto;cursor:pointer">
-            <option value="">Selecciona un asunto...</option>
-            <option value="info">Información general sobre tratamientos</option>
-            <option value="price">Preguntas sobre precios</option>
-            <option value="eligibility">Elegibilidad para tratamiento</option>
-            <option value="tech">Problema técnico con la web</option>
-            <option value="billing">Facturación / pagos</option>
-            <option value="other">Otro</option>
+            <option value="" data-i18n="contact.subj_select">Selecciona un asunto...</option>
+            <option value="info" data-i18n="contact.subj_info">Información general sobre tratamientos</option>
+            <option value="price" data-i18n="contact.subj_price">Preguntas sobre precios</option>
+            <option value="eligibility" data-i18n="contact.subj_eligibility">Elegibilidad para tratamiento</option>
+            <option value="tech" data-i18n="contact.subj_tech">Problema técnico con la web</option>
+            <option value="billing" data-i18n="contact.subj_billing">Facturación / pagos</option>
+            <option value="other" data-i18n="contact.subj_other">Otro</option>
           </select>
         </div>
         <div class="input-group">
-          <label class="input-label" for="ctMsg">Mensaje</label>
-          <textarea id="ctMsg" class="input-field" placeholder="Escribe tu mensaje aquí..." rows="5" required></textarea>
+          <label class="input-label" for="ctMsg" data-i18n="contact.form_msg">Mensaje</label>
+          <textarea id="ctMsg" class="input-field" data-i18n-placeholder="contact.form_msg_placeholder" placeholder="Escribe tu mensaje aquí..." rows="5" required></textarea>
         </div>
         <label class="check-item" style="align-items:flex-start">
           <input type="checkbox" id="ctPrivacy" required style="margin-top:2px"/>
-          <span style="font-size:0.875rem">He leído y acepto la <a href="../pages/legal/privacidad.html" class="text-coral" style="text-decoration:underline">Política de Privacidad</a>. *</span>
+          <span style="font-size:0.875rem" data-i18n-html="contact.form_privacy">He leído y acepto la <a href="../pages/legal/privacidad.html" class="text-coral" style="text-decoration:underline">Política de Privacidad</a>. *</span>
         </label>
-        <button type="submit" class="btn btn-primary" style="width:fit-content">Enviar mensaje →</button>
-        <p class="form-disclaimer">Respondemos en menos de 24 horas en días hábiles. Para consultas médicas, usa el portal de pacientes.</p>
+        <button type="submit" class="btn btn-primary" style="width:fit-content" data-i18n="contact.form_submit">Enviar mensaje →</button>
+        <p class="form-disclaimer" data-i18n="contact.form_disclaimer">Respondemos en menos de 24 horas en días hábiles. Para consultas médicas, usa el portal de pacientes.</p>
       </form>
     </div>
   </div>
@@ -88,11 +88,35 @@
 <!-- FAQ CONTACT -->
 <section class="content-section section-padding-sm">
   <div class="container" style="max-width:760px">
-    <h2 style="margin-bottom:2rem">Preguntas frecuentes de contacto</h2>
+    <h2 style="margin-bottom:2rem" data-i18n="contact.faq_title">Preguntas frecuentes de contacto</h2>
     <div class="faq-list">
-      <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>¿Puedo hablar con el médico antes de la consulta?</span><div class="faq-icon">+</div></button><div class="faq-answer"><div class="faq-answer-inner">Puedes enviarnos tus dudas generales por este formulario o WhatsApp. Sin embargo, las consultas médicas personalizadas solo se realizan tras completar el cuestionario de evaluación, que el médico revisa de forma confidencial.</div></div></div>
-      <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>¿Cuánto tarda en responder el equipo?</span><div class="faq-icon">+</div></button><div class="faq-answer"><div class="faq-answer-inner">El equipo de soporte responde en menos de 24 horas en días hábiles (lunes a viernes). El médico revisa las evaluaciones en un plazo de 24-48 horas desde su recepción.</div></div></div>
-      <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>¿Puedo cambiar los datos de mi evaluación ya enviada?</span><div class="faq-icon">+</div></button><div class="faq-answer"><div class="faq-answer-inner">Si tu evaluación aún no ha sido revisada, puedes contactarnos y la anularemos para que puedas reenviarla con los datos correctos. Si ya ha sido revisada, comunícalo directamente al médico en la siguiente consulta.</div></div></div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span data-i18n="contact.q1">¿Puedo hablar con el médico antes de la consulta?</span>
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner" data-i18n="contact.a1">Puedes enviarnos tus dudas generales por este formulario o WhatsApp. Sin embargo, las consultas médicas personalizadas solo se realizan tras completar el cuestionario de evaluación, que el médico revisa de forma confidencial.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span data-i18n="contact.q2">¿Cuánto tarda en responder el equipo?</span>
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner" data-i18n="contact.a2">El equipo de soporte responde en menos de 24 horas en días hábiles (lunes a viernes). El médico revisa las evaluaciones en un plazo de 24-48 horas desde su recepción.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span data-i18n="contact.q3">¿Puedo cambiar los datos de mi evaluación ya enviada?</span>
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner" data-i18n="contact.a3">Si tu evaluación aún no ha sido revisada, puedes contactarnos y la anularemos para que puedas reenviarla con los datos correctos. Si ya ha sido revisada, comunícalo directamente al médico en la siguiente consulta.</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

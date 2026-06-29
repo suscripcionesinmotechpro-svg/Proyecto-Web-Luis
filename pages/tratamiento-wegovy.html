@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Wegovy (Semaglutida) · Bajar Peso</title>
+  <title data-i18n="tw.page_title">Wegovy (Semaglutida) · Bajar Peso</title>
   <meta name="description" content="Wegovy (semaglutida 2,4 mg): tratamiento semanal para la obesidad aprobado por AEMPS. Resultados del ensayo STEP, elegibilidad y dosificación."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
@@ -19,11 +19,11 @@
 <main>
 <section class="page-hero">
   <div class="container">
-    <nav class="breadcrumb"><a href="../index.html">Inicio</a><span class="breadcrumb-sep">›</span><a href="tratamientos.html">Tratamientos</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Wegovy</span></nav>
+    <nav class="breadcrumb"><a href="../index.html" data-i18n="nav.home">Inicio</a><span class="breadcrumb-sep">›</span><a href="tratamientos.html" data-i18n="treatments.tag">Tratamientos</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Wegovy</span></nav>
     <div class="page-hero-content">
       <div class="section-tag" style="background:rgba(255,190,156,0.1);border-color:rgba(255,190,156,0.3);color:var(--color-coral)"><span class="dot"></span><span data-i18n="tw.tag">Agonista GLP-1</span></div>
       <h1 data-i18n="tw.hero_title">Wegovy <span style="font-weight:300;color: rgba(40,49,82,0.65)">· Semaglutida 2,4 mg</span></h1>
-      <p class="page-hero-subtitle">Tratamiento semanal específicamente aprobado para la obesidad. El ensayo STEP demostró pérdidas medias del 15% del peso corporal en 68 semanas.</p>
+      <p class="page-hero-subtitle" data-i18n="tw.hero_desc">Tratamiento semanal específicamente aprobado para la obesidad. El ensayo STEP demostró pérdidas medias del 15% del peso corporal en 68 semanas.</p>
       <a href="evaluacion.html" class="btn btn-primary" data-i18n="btn.eligible">Ver si soy elegible →</a>
     </div>
   </div>
@@ -32,63 +32,88 @@
 <section class="section-padding-sm">
   <div class="container">
     <div class="drug-detail">
+
+      <!-- SIDEBAR -->
       <div class="drug-sidebar">
         <div class="drug-card glass-card">
           <div class="drug-icon-large wegovy" style="background:white;padding:0.5rem;display:flex;align-items:center;justify-content:center;border-radius:12px;overflow:hidden">
             <img src="../assets/images/wegovy.png" alt="Wegovy" style="width:100%;height:100%;object-fit:cover"/>
           </div>
-          <div class="drug-name-large">Wegovy</div>
+          <div class="drug-name-large" data-i18n="treatments.wegovy_title">Wegovy</div>
           <div class="drug-generic">Semaglutida 2,4 mg · Novo Nordisk</div>
           <div class="drug-meta-list">
-            <div class="drug-meta-item"><span class="drug-meta-label">Mecanismo</span><span class="drug-meta-value">Agonista GLP-1</span></div>
-            <div class="drug-meta-item"><span class="drug-meta-label">Frecuencia</span><span class="drug-meta-value">Semanal</span></div>
-            <div class="drug-meta-item"><span class="drug-meta-label">Vía</span><span class="drug-meta-value">Subcutánea</span></div>
-            <div class="drug-meta-item"><span class="drug-meta-label">Dosis inicial</span><span class="drug-meta-value">0,25 mg/semana</span></div>
-            <div class="drug-meta-item"><span class="drug-meta-label">Dosis mantenimiento</span><span class="drug-meta-value">2,4 mg/semana</span></div>
-            <div class="drug-meta-item"><span class="drug-meta-label">Aprobado AEMPS</span><span class="drug-meta-value" style="color:#81C784">✓ Sí</span></div>
-            <div class="drug-meta-item"><span class="drug-meta-label">Pérdida media</span><span class="drug-meta-value">12 – 15%</span></div>
+            <div class="drug-meta-item"><span class="drug-meta-label" data-i18n="drug_lbl.mechanism">Mecanismo</span><span class="drug-meta-value">Agonista GLP-1</span></div>
+            <div class="drug-meta-item"><span class="drug-meta-label" data-i18n="drug_lbl.frequency">Frecuencia</span><span class="drug-meta-value" data-i18n="drug_lbl.weekly">Semanal</span></div>
+            <div class="drug-meta-item"><span class="drug-meta-label" data-i18n="drug_lbl.route">Vía</span><span class="drug-meta-value" data-i18n="drug_lbl.subcutaneous">Subcutánea</span></div>
+            <div class="drug-meta-item"><span class="drug-meta-label" data-i18n="drug_lbl.start_dose">Dosis inicial</span><span class="drug-meta-value" data-i18n="tw.dose_start">0,25 mg/semana</span></div>
+            <div class="drug-meta-item"><span class="drug-meta-label" data-i18n="drug_lbl.max_dose">Dosis máxima</span><span class="drug-meta-value" data-i18n="tw.dose_maint">2,4 mg/semana</span></div>
+            <div class="drug-meta-item"><span class="drug-meta-label" data-i18n="drug_lbl.aemps">Aprobado AEMPS</span><span class="drug-meta-value" style="color:#81C784" data-i18n="drug_lbl.yes_val">✓ Sí</span></div>
+            <div class="drug-meta-item"><span class="drug-meta-label" data-i18n="drug_lbl.avg_loss">Pérdida media</span><span class="drug-meta-value">12 – 15%</span></div>
           </div>
-          <a href="evaluacion.html" class="btn btn-primary" style="width:100%;justify-content:center">Iniciar evaluación</a>
+          <a href="evaluacion.html" class="btn btn-primary" style="width:100%;justify-content:center" data-i18n="drug_lbl.prescription_btn">Iniciar evaluación</a>
         </div>
-        <div class="alert alert-warning"><span>⚠️</span><span style="font-size:0.8rem">Requiere prescripción médica obligatoria.</span></div>
+        <div class="alert alert-warning">
+          <span>⚠️</span>
+          <span style="font-size:0.8rem" data-i18n="tw.warning">Wegovy requiere prescripción médica obligatoria en España. No está disponible sin receta.</span>
+        </div>
       </div>
 
+      <!-- MAIN CONTENT -->
       <div class="drug-main">
         <div>
-          <div class="drug-section-title">¿Qué es Wegovy?</div>
-          <p class="drug-text">Wegovy (semaglutida 2,4 mg) es un agonista del receptor GLP-1 desarrollado por Novo Nordisk, específicamente aprobado para el tratamiento de la obesidad. Es la versión de mayor dosis de semaglutida — el mismo principio activo de Ozempic, pero formulado a dosis más altas y con indicación específica para pérdida de peso.</p>
-          <p class="drug-text">Actúa imitando la hormona GLP-1 natural, que se libera tras comer. Esto produce saciedad, reduce el apetito y enlentece el vaciado gástrico, dando como resultado una reducción sostenida de la ingesta calórica.</p>
+          <div class="drug-section-title" data-i18n="tw.what_is_title">¿Qué es Wegovy?</div>
+          <p class="drug-text" data-i18n="tw.what_is_desc1">Wegovy (semaglutida 2,4 mg) es un agonista del receptor GLP-1 desarrollado por Novo Nordisk, específicamente aprobado para el tratamiento de la obesidad. Es la versión de mayor dosis de semaglutida — el mismo principio activo de Ozempic, pero formulado a dosis más altas y con indicación específica para pérdida de peso.</p>
+          <p class="drug-text" data-i18n="tw.what_is_desc2">Actúa imitando la hormona GLP-1 natural, que se libera tras comer. Esto produce saciedad, reduce el apetito y enlentece el vaciado gástrico, dando como resultado una reducción sostenida de la ingesta calórica.</p>
         </div>
         <div>
-          <div class="drug-section-title">Resultados clínicos (STEP-1)</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem">
-            <div class="glass-card" style="padding:1.25rem;text-align:center"><div style="font-size:1.75rem;font-weight:800;color:var(--color-coral)">15%</div><div style="font-size:0.8rem;color: rgba(40,49,82,0.65);margin-top:4px">pérdida media de peso corporal</div></div>
-            <div class="glass-card" style="padding:1.25rem;text-align:center"><div style="font-size:1.75rem;font-weight:800;color:var(--color-coral)">86%</div><div style="font-size:0.8rem;color: rgba(40,49,82,0.65);margin-top:4px">de pacientes perdieron ≥5%</div></div>
-            <div class="glass-card" style="padding:1.25rem;text-align:center"><div style="font-size:1.75rem;font-weight:800;color:var(--color-coral)">68 sem</div><div style="font-size:0.8rem;color: rgba(40,49,82,0.65);margin-top:4px">duración del ensayo</div></div>
-          </div>
-        </div>
-        <div>
-          <div class="drug-section-title">Pauta de dosificación</div>
-          <div style="display:flex;flex-direction:column;gap:0.75rem">
-            <div style="display:flex;justify-content:space-between;padding:1rem;background:rgba(255,255,255,0.06);border-radius:8px;font-size:0.875rem"><span>Semanas 1–4</span><strong>0,25 mg/sem</strong></div>
-            <div style="display:flex;justify-content:space-between;padding:1rem;background:rgba(255,255,255,0.06);border-radius:8px;font-size:0.875rem"><span>Semanas 5–8</span><strong>0,5 mg/sem</strong></div>
-            <div style="display:flex;justify-content:space-between;padding:1rem;background:rgba(255,255,255,0.06);border-radius:8px;font-size:0.875rem"><span>Semanas 9–12</span><strong>1 mg/sem</strong></div>
-            <div style="display:flex;justify-content:space-between;padding:1rem;background:rgba(255,255,255,0.06);border-radius:8px;font-size:0.875rem"><span>Semanas 13–16</span><strong>1,7 mg/sem</strong></div>
-            <div style="display:flex;justify-content:space-between;padding:1rem;background:rgba(255,190,156,0.15);border:1px solid rgba(255,190,156,0.3);border-radius:8px;font-size:0.875rem"><span>Semana 17+ (mantenimiento)</span><strong>2,4 mg/sem</strong></div>
-          </div>
-        </div>
-        <div>
-          <div class="drug-section-title">Efectos secundarios más frecuentes</div>
+          <div class="drug-section-title" data-i18n="drug_title.how_works">Cómo funciona</div>
           <ul class="drug-list">
-            <li>Náuseas (especialmente en fases de escalada de dosis)</li>
-            <li>Diarrea o estreñimiento</li>
-            <li>Vómitos (menos frecuentes)</li>
-            <li>Dolor de cabeza (fase de inicio)</li>
-            <li>Fatiga leve transitoria</li>
+            <li data-i18n="tw.how1">Imita la hormona natural de la saciedad, reduciendo el hambre constante</li>
+            <li data-i18n="tw.how2">Enlentece la digestión gástrica, prolongando la saciedad física</li>
+            <li data-i18n="tw.how3">Disminuye la ansiedad por comer (food noise) en el cerebro</li>
+            <li data-i18n="tw.how4">Mejora el metabolism y ayuda a consolidar hábitos saludables</li>
           </ul>
         </div>
-        <a href="evaluacion.html" class="btn btn-primary" style="width:fit-content;font-size:1rem;padding:0.875rem 2rem">Comprobar mi elegibilidad →</a>
+        <div>
+          <div class="drug-section-title" data-i18n="tw.results_title">Resultados clínicos (STEP-1)</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem">
+            <div class="glass-card" style="padding:1.25rem;text-align:center"><div style="font-size:1.75rem;font-weight:800;color:var(--color-coral)">15%</div><div style="font-size:0.8rem;color: rgba(40,49,82,0.65);margin-top:4px" data-i18n="tw.results_stat1">pérdida media de peso corporal</div></div>
+            <div class="glass-card" style="padding:1.25rem;text-align:center"><div style="font-size:1.75rem;font-weight:800;color:var(--color-coral)">86%</div><div style="font-size:0.8rem;color: rgba(40,49,82,0.65);margin-top:4px" data-i18n="tw.results_stat2">de pacientes perdieron ≥5%</div></div>
+            <div class="glass-card" style="padding:1.25rem;text-align:center"><div style="font-size:1.75rem;font-weight:800;color:var(--color-coral)" data-i18n="tw.trial_duration">68 sem</div><div style="font-size:0.8rem;color: rgba(40,49,82,0.65);margin-top:4px" data-i18n="tw.results_stat3">duración del ensayo principal</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="drug-section-title" data-i18n="drug_title.eligibility">¿Quién puede usarlo? (Elegibilidad AEMPS)</div>
+          <ul class="drug-list">
+            <li data-i18n="tw.elig1">Adultos con un índice de masa corporal (IMC) de 30 o más</li>
+            <li data-i18n="tw.elig2">Adultos con IMC de 27 o más y condiciones de salud relacionadas (tensión alta, diabetes, etc.)</li>
+            <li data-i18n="tw.elig3">Sin contraindicaciones renales graves o antecedentes de pancreatitis</li>
+          </ul>
+        </div>
+        <div>
+          <div class="drug-section-title" data-i18n="drug_title.dosing">Pauta de dosificación</div>
+          <div style="display:flex;flex-direction:column;gap:0.75rem">
+            <div style="display:flex;justify-content:space-between;padding:1rem;background:rgba(255,255,255,0.06);border-radius:8px;font-size:0.875rem"><span data-i18n="drug_lbl.dose_weeks_1_4">Semanas 1–4</span><strong data-i18n="tw.dose_w1_4_val">0,25 mg/sem</strong></div>
+            <div style="display:flex;justify-content:space-between;padding:1rem;background:rgba(255,255,255,0.06);border-radius:8px;font-size:0.875rem"><span data-i18n="drug_lbl.dose_weeks_5_8">Semanas 5–8</span><strong data-i18n="tw.dose_w5_8_val">0,5 mg/sem</strong></div>
+            <div style="display:flex;justify-content:space-between;padding:1rem;background:rgba(255,255,255,0.06);border-radius:8px;font-size:0.875rem"><span data-i18n="drug_lbl.dose_weeks_9_12">Semanas 9–12</span><strong data-i18n="tw.dose_w9_12_val">1 mg/sem</strong></div>
+            <div style="display:flex;justify-content:space-between;padding:1rem;background:rgba(255,255,255,0.06);border-radius:8px;font-size:0.875rem"><span data-i18n="drug_lbl.dose_weeks_13_16">Semanas 13–16</span><strong data-i18n="tw.dose_w13_16_val">1,7 mg/sem</strong></div>
+            <div style="display:flex;justify-content:space-between;padding:1rem;background:rgba(255,190,156,0.15);border:1px solid rgba(255,190,156,0.3);border-radius:8px;font-size:0.875rem"><span data-i18n="tw.dose_w17_plus_label">Semana 17+ (mantenimiento)</span><strong data-i18n="tw.dose_w17_plus_val">2,4 mg/sem</strong></div>
+          </div>
+          <p style="font-size:0.8rem;color: rgba(40,49,82,0.55);margin-top:0.75rem" data-i18n="drug_lbl.dose_custom_desc">El médico determinará la dosis óptima en función de tu respuesta y tolerancia.</p>
+        </div>
+        <div>
+          <div class="drug-section-title" data-i18n="drug_title.side_effects">Efectos secundarios más frecuentes</div>
+          <ul class="drug-list">
+            <li data-i18n="tw.side1">Náuseas (especialmente en fases de escalada de dosis)</li>
+            <li data-i18n="tw.side2">Diarrea o estreñimiento</li>
+            <li data-i18n="tw.side3">Vómitos (menos frecuentes)</li>
+            <li data-i18n="tw.side4">Dolor de cabeza (fase de inicio)</li>
+            <li data-i18n="tw.side5">Fatiga leve transitoria</li>
+          </ul>
+        </div>
+        <a href="evaluacion.html" class="btn btn-primary" style="width:fit-content;font-size:1rem;padding:0.875rem 2rem" data-i18n="drug_lbl.check_eligibility">Comprobar mi elegibilidad →</a>
       </div>
+
     </div>
   </div>
 </section>
