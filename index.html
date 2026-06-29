@@ -100,52 +100,7 @@
         <!-- About -->
         <a href="pages/sobre-nosotros.html" class="nav-link" role="listitem" data-i18n="nav.about">Sobre Nosotros</a>
 
-        <!-- Treatments Dropdown -->
-        <div class="nav-dropdown nav-link" role="listitem">
-          <div class="nav-dropdown-toggle" aria-haspopup="true">
-            <span data-i18n="nav.treatments">Tratamientos</span>
-            <svg class="nav-dropdown-arrow" viewBox="0 0 11 6" fill="none" aria-hidden="true">
-              <path d="M0.5 0.5L5 5 9.5 0.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div class="dropdown-panel" role="menu">
-            <div class="dropdown-heading" data-i18n="nav.our_treatments">Nuestros Tratamientos</div>
-            <div class="dropdown-grid">
-              <a href="pages/tratamiento-mounjaro.html" class="dropdown-item" role="menuitem">
-                <div class="dropdown-item-icon"><img src="assets/images/mounjaro.png" alt="Mounjaro"></div>
-                <div class="dropdown-item-text">
-                  <div class="dropdown-item-name" data-i18n="treatments.mounjaro_title">Mounjaro</div>
-                  <div class="dropdown-item-desc" data-i18n="nav.mounjaro_desc">Control efectivo del peso.</div>
-                </div>
-                <span class="dropdown-arrow-sm">↗</span>
-              </a>
-              <a href="pages/tratamiento-wegovy.html" class="dropdown-item" role="menuitem">
-                <div class="dropdown-item-icon"><img src="assets/images/wegovy.png" alt="Wegovy"></div>
-                <div class="dropdown-item-text">
-                  <div class="dropdown-item-name" data-i18n="treatments.wegovy_title">Wegovy</div>
-                  <div class="dropdown-item-desc" data-i18n="nav.wegovy_desc">Te ayuda a sentirte saciado.</div>
-                </div>
-                <span class="dropdown-arrow-sm">↗</span>
-              </a>
-              <a href="pages/tratamiento-ozempic.html" class="dropdown-item" role="menuitem">
-                <div class="dropdown-item-icon"><img src="assets/images/ozempic.png" alt="Ozempic"></div>
-                <div class="dropdown-item-text">
-                  <div class="dropdown-item-name" data-i18n="treatments.ozempic_title">Ozempic</div>
-                  <div class="dropdown-item-desc" data-i18n="nav.ozempic_desc">Mejora el control glucémico.</div>
-                </div>
-                <span class="dropdown-arrow-sm">↗</span>
-              </a>
-              <a href="pages/tratamiento-saxenda.html" class="dropdown-item" role="menuitem">
-                <div class="dropdown-item-icon"><img src="assets/images/saxenda.png" alt="Saxenda"></div>
-                <div class="dropdown-item-text">
-                  <div class="dropdown-item-name" data-i18n="treatments.saxenda_title">Saxenda</div>
-                  <div class="dropdown-item-desc" data-i18n="nav.saxenda_desc">Controla el apetito.</div>
-                </div>
-                <span class="dropdown-arrow-sm">↗</span>
-              </a>
-            </div>
-          </div>
-        </div>
+        <a href="pages/tratamientos.html" class="nav-link" role="listitem" data-i18n="nav.treatments">Tratamientos</a>
 
         <!-- How it Works Dropdown -->
         <div class="nav-dropdown nav-link" role="listitem">
@@ -215,16 +170,7 @@
   <nav>
     <a href="pages/sobre-nosotros.html" class="mobile-nav-link" data-i18n="nav.about">Sobre Nosotros</a>
 
-    <div class="mobile-nav-link" id="mobileDropTreat" style="cursor:pointer">
-      <span data-i18n="nav.treatments">Tratamientos</span>
-      <span>›</span>
-    </div>
-    <div class="mobile-sub-links" id="mobileSubTreat">
-      <a href="pages/tratamiento-mounjaro.html" class="mobile-sub-link"><img src="assets/images/mounjaro.png" alt="Mounjaro" style="width:24px; height:24px; object-fit:cover; border-radius:4px; margin-right:8px;"> Mounjaro</a>
-      <a href="pages/tratamiento-wegovy.html"   class="mobile-sub-link"><img src="assets/images/wegovy.png" alt="Wegovy" style="width:24px; height:24px; object-fit:cover; border-radius:4px; margin-right:8px;"> Wegovy</a>
-      <a href="pages/tratamiento-ozempic.html"  class="mobile-sub-link"><img src="assets/images/ozempic.png" alt="Ozempic" style="width:24px; height:24px; object-fit:cover; border-radius:4px; margin-right:8px;"> Ozempic</a>
-      <a href="pages/tratamiento-saxenda.html"  class="mobile-sub-link"><img src="assets/images/saxenda.png" alt="Saxenda" style="width:24px; height:24px; object-fit:cover; border-radius:4px; margin-right:8px;"> Saxenda</a>
-    </div>
+    <a href="pages/tratamientos.html" class="mobile-nav-link" data-i18n="nav.treatments">Tratamientos</a>
 
     <div class="mobile-nav-link" id="mobileDropHow" style="cursor:pointer">
       <span data-i18n="nav.how">Cómo Funciona</span>
@@ -357,76 +303,40 @@
       </p>
     </div>
 
-    <div class="treatments-grid">
+    <div class="treatments-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); max-width: 960px; margin: 0 auto;">
 
-      <!-- Mounjaro -->
-      <article class="treatment-card reveal" onclick="window.location.href='pages/tratamiento-mounjaro.html'">
-        <div style="background:var(--color-white-08);width:100%;height:140px;border-radius:12px;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:1rem">
-          <img src="assets/images/mounjaro.png" alt="Mounjaro" style="max-width:100%;max-height:100%;object-fit:contain;padding:0.5rem"/>
+      <!-- Terapia Dual GIP + GLP-1 -->
+      <article class="treatment-card reveal" onclick="window.location.href='pages/tratamientos.html'">
+        <div style="background:linear-gradient(135deg, rgba(75,91,163,0.1), rgba(255,190,156,0.05));width:100%;height:140px;border-radius:12px;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:1rem;font-size:3.5rem">
+          🧬
         </div>
         <div class="flex-between">
           <span class="treatment-badge" data-i18n="treatments.badge">Con receta médica</span>
         </div>
         <div>
-          <h3 class="treatment-name" data-i18n="treatments.mounjaro_title">Mounjaro</h3>
-          <p class="treatment-desc" data-i18n="treatments.mounjaro_desc">Control efectivo del peso corporal mediante agonismo dual GIP/GLP-1.</p>
+          <h3 class="treatment-name" data-i18n="treatments.gen_dual_title">Terapia Dual GIP + GLP-1</h3>
+          <p class="treatment-desc" data-i18n="treatments.gen_dual_desc">Tratamiento semanal avanzado de última generación (Tirzepatida) que actúa de forma dual para maximizar la saciedad y el control metabólico.</p>
         </div>
-        <a href="pages/tratamiento-mounjaro.html" class="treatment-link" aria-label="Ver tratamiento Mounjaro">
-          <span data-i18n="treatments.explore">Ver tratamiento</span>
+        <a href="pages/tratamientos.html" class="treatment-link" aria-label="Ver tratamientos duales">
+          <span data-i18n="treatments.explore">Ver detalles</span>
           <span class="treatment-link-icon" aria-hidden="true">↗</span>
         </a>
       </article>
 
-      <!-- Wegovy -->
-      <article class="treatment-card reveal reveal-delay-1" onclick="window.location.href='pages/tratamiento-wegovy.html'">
-        <div style="background:var(--color-white-08);width:100%;height:140px;border-radius:12px;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:1rem">
-          <img src="assets/images/wegovy.png" alt="Wegovy" style="max-width:100%;max-height:100%;object-fit:contain;padding:0.5rem"/>
+      <!-- Terapia GLP-1 -->
+      <article class="treatment-card reveal reveal-delay-1" onclick="window.location.href='pages/tratamientos.html'">
+        <div style="background:linear-gradient(135deg, rgba(75,91,163,0.05), rgba(255,190,156,0.1));width:100%;height:140px;border-radius:12px;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:1rem;font-size:3.5rem">
+          ⚕️
         </div>
         <div class="flex-between">
           <span class="treatment-badge" data-i18n="treatments.badge">Con receta médica</span>
         </div>
         <div>
-          <h3 class="treatment-name" data-i18n="treatments.wegovy_title">Wegovy</h3>
-          <p class="treatment-desc" data-i18n="treatments.wegovy_desc">Te ayuda a sentirte saciado por más tiempo. Tratamiento semanal de semaglutida.</p>
+          <h3 class="treatment-name" data-i18n="treatments.gen_glp1_title">Terapia Agonista GLP-1</h3>
+          <p class="treatment-desc" data-i18n="treatments.gen_glp1_desc">Tratamientos tradicionales (Semaglutida o Liraglutida) inyectados de forma semanal o diaria para regular el apetito y ralentizar la digestión de manera segura.</p>
         </div>
-        <a href="pages/tratamiento-wegovy.html" class="treatment-link" aria-label="Ver tratamiento Wegovy">
-          <span data-i18n="treatments.explore">Ver tratamiento</span>
-          <span class="treatment-link-icon" aria-hidden="true">↗</span>
-        </a>
-      </article>
-
-      <!-- Ozempic -->
-      <article class="treatment-card reveal reveal-delay-2" onclick="window.location.href='pages/tratamiento-ozempic.html'">
-        <div style="background:var(--color-white-08);width:100%;height:140px;border-radius:12px;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:1rem">
-          <img src="assets/images/ozempic.png" alt="Ozempic" style="max-width:100%;max-height:100%;object-fit:contain;padding:0.5rem"/>
-        </div>
-        <div class="flex-between">
-          <span class="treatment-badge" data-i18n="treatments.badge">Con receta médica</span>
-        </div>
-        <div>
-          <h3 class="treatment-name" data-i18n="treatments.ozempic_title">Ozempic</h3>
-          <p class="treatment-desc" data-i18n="treatments.ozempic_desc">Mejora el control glucémico y favorece la pérdida de peso progresiva.</p>
-        </div>
-        <a href="pages/tratamiento-ozempic.html" class="treatment-link" aria-label="Ver tratamiento Ozempic">
-          <span data-i18n="treatments.explore">Ver tratamiento</span>
-          <span class="treatment-link-icon" aria-hidden="true">↗</span>
-        </a>
-      </article>
-
-      <!-- Saxenda -->
-      <article class="treatment-card reveal reveal-delay-3" onclick="window.location.href='pages/tratamiento-saxenda.html'">
-        <div style="background:var(--color-white-08);width:100%;height:140px;border-radius:12px;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:1rem">
-          <img src="assets/images/saxenda.png" alt="Saxenda" style="max-width:100%;max-height:100%;object-fit:contain;padding:0.5rem"/>
-        </div>
-        <div class="flex-between">
-          <span class="treatment-badge" data-i18n="treatments.badge">Con receta médica</span>
-        </div>
-        <div>
-          <h3 class="treatment-name" data-i18n="treatments.saxenda_title">Saxenda</h3>
-          <p class="treatment-desc" data-i18n="treatments.saxenda_desc">Controla el hambre y reduce la ingesta calórica de forma sostenida.</p>
-        </div>
-        <a href="pages/tratamiento-saxenda.html" class="treatment-link" aria-label="Ver tratamiento Saxenda">
-          <span data-i18n="treatments.explore">Ver tratamiento</span>
+        <a href="pages/tratamientos.html" class="treatment-link" aria-label="Ver tratamientos GLP-1">
+          <span data-i18n="treatments.explore">Ver detalles</span>
           <span class="treatment-link-icon" aria-hidden="true">↗</span>
         </a>
       </article>

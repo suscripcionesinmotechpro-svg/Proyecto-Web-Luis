@@ -113,177 +113,72 @@
       </div>
     </div>
 
-    <!-- Dynamic Tabs Selector -->
-    <div class="pricing-tabs" style="display:flex; justify-content:center; gap:12px; margin-bottom:3rem; flex-wrap:wrap;">
-      <button class="tab-btn active" id="btn-mounjaro" onclick="switchPricing('mounjaro')">💉 Mounjaro</button>
-      <button class="tab-btn" id="btn-wegovy" onclick="switchPricing('wegovy')">💊 Wegovy</button>
-      <button class="tab-btn" id="btn-ozempic" onclick="switchPricing('ozempic')">🔬 Ozempic</button>
-      <button class="tab-btn" id="btn-saxenda" onclick="switchPricing('saxenda')">⚕️ Saxenda</button>
-    </div>
-
+    <!-- PRICING CARDS -->
     <div class="pricing-container" style="max-width:960px; margin:0 auto">
       
-      <!-- MOUNJARO PLANS -->
-      <div class="pricing-grid drug-pricing-section" id="pricing-mounjaro" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:24px;">
-        <!-- Inicio Mounjaro -->
+      <!-- SUBSCRIPTION SERVICE PLANS -->
+      <div class="pricing-grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:24px; margin-bottom: 3rem;">
+        
+        <!-- Plan Mensual -->
         <div class="pricing-card reveal">
-          <div class="pricing-name text-caption text-white-60" data-i18n="pricing.m_dose1">DOSIS DE INICIO (2.5 mg)</div>
+          <div class="pricing-name text-caption text-white-60" data-i18n="pricing.plan_monthly_title">PROGRAMA MENSUAL</div>
           <div>
-            <div class="pricing-price">219<span style="font-size:1.5rem;font-weight:500">€</span></div>
-            <div class="pricing-period" data-i18n="pricing.per_month">Al mes · Todo incluido</div>
+            <div class="pricing-price">49<span style="font-size:1.5rem;font-weight:500">€</span></div>
+            <div class="pricing-period" data-i18n="pricing.per_month">Al mes · Servicio Clínico</div>
           </div>
-          <div class="pricing-desc text-white-60" data-i18n="pricing.m_desc1">Ideal para comenzar tu tratamiento y permitir que el cuerpo se adapte de forma segura.</div>
+          <div class="pricing-desc text-white-60" data-i18n="pricing.plan_monthly_desc">Ideal para quienes prefieren flexibilidad mes a mes sin compromisos a largo plazo.</div>
           <div class="pricing-features">
-            <div class="pricing-feature" data-i18n="pricing.m_f1">1x Bolígrafo Mounjaro original (2.5mg)</div>
-            <div class="pricing-feature" data-i18n="pricing.m_f2">Consulta médica online inicial</div>
-            <div class="pricing-feature" data-i18n="pricing.m_f3">Receta oficial electrónica</div>
-            <div class="pricing-feature" data-i18n="pricing.m_f4">Soporte continuo y chat con tu médico</div>
+            <div class="pricing-feature" data-i18n="pricing.f_eval">Evaluación médica online inicial</div>
+            <div class="pricing-feature" data-i18n="pricing.f_presc">Receta oficial electrónica privada</div>
+            <div class="pricing-feature" data-i18n="pricing.f_follow">Seguimiento mensual y chat clínico</div>
+            <div class="pricing-feature" data-i18n="pricing.f_support">Soporte nutricional y de hábitos</div>
           </div>
           <a href="evaluacion.html" class="btn btn-outline" style="width:100%;justify-content:center" data-i18n="pricing.start_assessment">Iniciar evaluación</a>
         </div>
-        <!-- Escalada Mounjaro -->
+
+        <!-- Plan Trimestral -->
         <div class="pricing-card featured reveal reveal-delay-1">
           <div class="pricing-badge" data-i18n="pricing.badge_recommended">Recomendado</div>
-          <div class="pricing-name text-caption" data-i18n="pricing.m_dose2">DOSIS INTERMEDIA (5 mg - 7.5 mg)</div>
+          <div class="pricing-name text-caption" data-i18n="pricing.plan_quarterly_title">PROGRAMA TRIMESTRAL</div>
           <div>
-            <div class="pricing-price">249<span style="font-size:1.5rem;font-weight:500">€</span></div>
-            <div class="pricing-period" data-i18n="pricing.per_month">Al mes · Todo incluido</div>
+            <div class="pricing-price">129<span style="font-size:1.5rem;font-weight:500">€</span></div>
+            <div class="pricing-period" data-i18n="pricing.per_quarter">Cada 3 meses (43 €/mes)</div>
           </div>
-          <div class="pricing-desc" data-i18n="pricing.m_desc2">Para pacientes que progresan en el tratamiento y requieren mayor efectividad clínica.</div>
+          <div class="pricing-desc" data-i18n="pricing.plan_quarterly_desc">El periodo recomendado por médicos para observar la adaptación del cuerpo y los primeros resultados.</div>
           <div class="pricing-features">
-            <div class="pricing-feature" data-i18n="pricing.m_f5">1x Bolígrafo Mounjaro (5mg o 7.5mg)</div>
-            <div class="pricing-feature" data-i18n="pricing.m_f6">Evaluación mensual de tolerancia</div>
-            <div class="pricing-feature" data-i18n="pricing.m_f7">Ajuste y escalado de dosis guiado</div>
-            <div class="pricing-feature" data-i18n="pricing.m_f8">Receta electrónica renovada</div>
+            <div class="pricing-feature" data-i18n="pricing.f_eval">Evaluación médica online inicial</div>
+            <div class="pricing-feature" data-i18n="pricing.f_presc_multi">Recetas oficiales electrónicas continuas</div>
+            <div class="pricing-feature" data-i18n="pricing.f_follow">Seguimiento mensual y chat clínico</div>
+            <div class="pricing-feature" data-i18n="pricing.f_support">Soporte nutricional y de hábitos</div>
           </div>
-          <a href="evaluacion.html" class="btn btn-primary" style="width:100%;justify-content:center;background:white;color:var(--color-primary)" data-i18n="pricing.select_dose_btn">Seleccionar dosis</a>
+          <a href="evaluacion.html" class="btn btn-primary" style="width:100%;justify-content:center;background:white;color:var(--color-primary)" data-i18n="pricing.start_assessment">Iniciar evaluación</a>
         </div>
-        <!-- Mantenimiento Mounjaro -->
+
+        <!-- Plan Semestral -->
         <div class="pricing-card reveal reveal-delay-2">
-          <div class="pricing-name text-caption text-white-60" data-i18n="pricing.m_dose3">DOSIS ALTA (10 mg - 15 mg)</div>
+          <div class="pricing-name text-caption text-white-60" data-i18n="pricing.plan_half_title">PROGRAMA SEMESTRAL</div>
           <div>
-            <div class="pricing-price">299<span style="font-size:1.5rem;font-weight:500">€</span></div>
-            <div class="pricing-period" data-i18n="pricing.per_month">Al mes · Todo incluido</div>
+            <div class="pricing-price">210<span style="font-size:1.5rem;font-weight:500">€</span></div>
+            <div class="pricing-period" data-i18n="pricing.per_half">Cada 6 meses (35 €/mes)</div>
           </div>
-          <div class="pricing-desc text-white-60" data-i18n="pricing.m_desc3">Dosis terapéuticas máximas para consolidar la pérdida de peso corporal a largo plazo.</div>
+          <div class="pricing-desc text-white-60" data-i18n="pricing.plan_half_desc">Ahorro máximo para un tratamiento consolidado de estabilización metabólica a medio plazo.</div>
           <div class="pricing-features">
-            <div class="pricing-feature" data-i18n="pricing.m_f9">1x Bolígrafo Mounjaro (10mg a 15mg)</div>
-            <div class="pricing-feature" data-i18n="pricing.m_f10">Receta mensual y soporte prioritario</div>
-            <div class="pricing-feature" data-i18n="pricing.m_f11">Seguimiento médico especializado</div>
-            <div class="pricing-feature" data-i18n="pricing.m_f12">Monitoreo de mantenimiento final</div>
+            <div class="pricing-feature" data-i18n="pricing.f_eval">Evaluación médica online inicial</div>
+            <div class="pricing-feature" data-i18n="pricing.f_presc_multi">Recetas oficiales electrónicas continuas</div>
+            <div class="pricing-feature" data-i18n="pricing.f_follow">Seguimiento mensual y chat clínico</div>
+            <div class="pricing-feature" data-i18n="pricing.f_support">Soporte nutricional y de hábitos</div>
           </div>
           <a href="evaluacion.html" class="btn btn-outline" style="width:100%;justify-content:center" data-i18n="pricing.start_assessment">Iniciar evaluación</a>
         </div>
+
       </div>
 
-      <!-- WEGOVY PLANS -->
-      <div class="pricing-grid drug-pricing-section" id="pricing-wegovy" style="display:none; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:24px;">
-        <!-- Inicio Wegovy -->
-        <div class="pricing-card reveal">
-          <div class="pricing-name text-caption text-white-60" data-i18n="pricing.w_dose1">DOSIS INICIAL (0.25 mg - 0.5 mg)</div>
-          <div>
-            <div class="pricing-price">179<span style="font-size:1.5rem;font-weight:500">€</span></div>
-            <div class="pricing-period" data-i18n="pricing.per_month">Al mes · Todo incluido</div>
-          </div>
-          <div class="pricing-desc text-white-60" data-i18n="pricing.w_desc1">Dosis de habituación. Prepara el organismo y minimiza efectos secundarios.</div>
-          <div class="pricing-features">
-            <div class="pricing-feature" data-i18n="pricing.w_f1">1x Bolígrafo Wegovy (0.25mg o 0.5mg)</div>
-            <div class="pricing-feature" data-i18n="pricing.w_f2">Consulta y revisión médica online</div>
-            <div class="pricing-feature" data-i18n="pricing.w_f3">Receta oficial electrónica</div>
-            <div class="pricing-feature" data-i18n="pricing.w_f4">Chat de soporte médico directo</div>
-          </div>
-          <a href="evaluacion.html" class="btn btn-outline" style="width:100%;justify-content:center" data-i18n="pricing.start_assessment">Iniciar evaluación</a>
-        </div>
-        <!-- Escalada Wegovy -->
-        <div class="pricing-card featured reveal reveal-delay-1">
-          <div class="pricing-badge" data-i18n="pricing.badge_popular">Más popular</div>
-          <div class="pricing-name text-caption" data-i18n="pricing.w_dose2">DOSIS INTERMEDIA (1.0 mg)</div>
-          <div>
-            <div class="pricing-price">199<span style="font-size:1.5rem;font-weight:500">€</span></div>
-            <div class="pricing-period" data-i18n="pricing.per_month">Al mes · Todo incluido</div>
-          </div>
-          <div class="pricing-desc" data-i18n="pricing.w_desc2">Dosis intermedia para incrementar la saciedad y potenciar la pérdida de grasa corporal.</div>
-          <div class="pricing-features">
-            <div class="pricing-feature" data-i18n="pricing.w_f5">1x Bolígrafo Wegovy (1.0mg)</div>
-            <div class="pricing-feature" data-i18n="pricing.w_f6">Control de progresos clínicos</div>
-            <div class="pricing-feature" data-i18n="pricing.w_f7">Receta mensual y soporte médico</div>
-            <div class="pricing-feature" data-i18n="pricing.w_f8">Ajuste de hábitos y pautas de salud</div>
-          </div>
-          <a href="evaluacion.html" class="btn btn-primary" style="width:100%;justify-content:center;background:white;color:var(--color-primary)" data-i18n="pricing.select_dose_btn">Seleccionar dosis</a>
-        </div>
-        <!-- Mantenimiento Wegovy -->
-        <div class="pricing-card reveal reveal-delay-2">
-          <div class="pricing-name text-caption text-white-60" data-i18n="pricing.w_dose3">DOSIS ALTA (1.7 mg - 2.4 mg)</div>
-          <div>
-            <div class="pricing-price">259<span style="font-size:1.5rem;font-weight:500">€</span></div>
-            <div class="pricing-period" data-i18n="pricing.per_month">Al mes · Todo incluido</div>
-          </div>
-          <div class="pricing-desc text-white-60" data-i18n="pricing.w_desc3">Dosis de mantenimiento recomendadas a largo plazo para consolidar los resultados obtenidos.</div>
-          <div class="pricing-features">
-            <div class="pricing-feature" data-i18n="pricing.w_f9">1x Bolígrafo Wegovy (1.7mg o 2.4mg)</div>
-            <div class="pricing-feature" data-i18n="pricing.w_f10">Monitoreo médico personalizado</div>
-            <div class="pricing-feature" data-i18n="pricing.w_f11">Receta electrónica recurrente</div>
-            <div class="pricing-feature" data-i18n="pricing.w_f12">Soporte por chat prioritario</div>
-          </div>
-          <a href="evaluacion.html" class="btn btn-outline" style="width:100%;justify-content:center" data-i18n="pricing.start_assessment">Iniciar evaluación</a>
-        </div>
-      </div>
-
-      <!-- OZEMPIC PLANS -->
-      <div class="pricing-grid drug-pricing-section" id="pricing-ozempic" style="display:none; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:24px;">
-        <!-- Inicio Ozempic -->
-        <div class="pricing-card reveal">
-          <div class="pricing-name text-caption text-white-60" data-i18n="pricing.o_dose1">DOSIS DE INICIO (0.25 mg - 0.5 mg)</div>
-          <div>
-            <div class="pricing-price">139<span style="font-size:1.5rem;font-weight:500">€</span></div>
-            <div class="pricing-period" data-i18n="pricing.per_month">Al mes · Todo incluido</div>
-          </div>
-          <div class="pricing-desc text-white-60" data-i18n="pricing.o_desc1">Fórmula de semaglutida clásica para comenzar a mejorar el control metabólico y del apetito.</div>
-          <div class="pricing-features">
-            <div class="pricing-feature" data-i18n="pricing.o_f1">1x Bolígrafo Ozempic (0.25mg o 0.5mg)</div>
-            <div class="pricing-feature" data-i18n="pricing.o_f2">Evaluación médica online inicial</div>
-            <div class="pricing-feature" data-i18n="pricing.o_f3">Emisión de receta médica mensual</div>
-            <div class="pricing-feature" data-i18n="pricing.o_f4">Chat médico directo para consultas</div>
-          </div>
-          <a href="evaluacion.html" class="btn btn-outline" style="width:100%;justify-content:center" data-i18n="pricing.start_assessment">Iniciar evaluación</a>
-        </div>
-        <!-- Mantenimiento Ozempic -->
-        <div class="pricing-card featured reveal reveal-delay-1">
-          <div class="pricing-badge" data-i18n="pricing.badge_recommended">Recomendado</div>
-          <div class="pricing-name text-caption" data-i18n="pricing.o_dose2">DOSIS DE MANTENIMIENTO (1.0 mg)</div>
-          <div>
-            <div class="pricing-price">169<span style="font-size:1.5rem;font-weight:500">€</span></div>
-            <div class="pricing-period" data-i18n="pricing.per_month">Al mes · Todo incluido</div>
-          </div>
-          <div class="pricing-desc" data-i18n="pricing.o_desc2">Máxima dosis de Ozempic aprobada. Ofrece un excelente control glucémico y metabólico.</div>
-          <div class="pricing-features">
-            <div class="pricing-feature" data-i18n="pricing.o_f5">1x Bolígrafo Ozempic (1.0mg)</div>
-            <div class="pricing-feature" data-i18n="pricing.o_f6">Evaluación médica de continuidad</div>
-            <div class="pricing-feature" data-i18n="pricing.o_f7">Renovación de recetas oficial</div>
-            <div class="pricing-feature" data-i18n="pricing.o_f8">Soporte médico prioritario</div>
-          </div>
-          <a href="evaluacion.html" class="btn btn-primary" style="width:100%;justify-content:center;background:white;color:var(--color-primary)" data-i18n="pricing.select_dose_btn">Seleccionar dosis</a>
-        </div>
-      </div>
-
-      <!-- SAXENDA PLANS -->
-      <div class="pricing-grid drug-pricing-section" id="pricing-saxenda" style="display:none; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:24px; max-width: 600px; margin: 0 auto;">
-        <!-- Dosis única Saxenda -->
-        <div class="pricing-card featured reveal">
-          <div class="pricing-badge" data-i18n="pricing.badge_daily">Tratamiento Diario</div>
-          <div class="pricing-name text-caption" data-i18n="pricing.s_dose1">PLAN MENSUAL SAXENDA</div>
-          <div>
-            <div class="pricing-price">229<span style="font-size:1.5rem;font-weight:500">€</span></div>
-            <div class="pricing-period" data-i18n="pricing.per_month">Al mes · Todo incluido</div>
-          </div>
-          <div class="pricing-desc" data-i18n="pricing.s_desc1">Tratamiento de liraglutida diaria. Ideal para pacientes que desean un ajuste de dosis flexible.</div>
-          <div class="pricing-features">
-            <div class="pricing-feature" data-i18n="pricing.s_f1">Caja de 5x Bolígrafos Saxenda original</div>
-            <div class="pricing-feature" data-i18n="pricing.s_f2">Consulta médica online inicial</div>
-            <div class="pricing-feature" data-i18n="pricing.s_f3">Recetas oficiales y seguimiento mensual</div>
-            <div class="pricing-feature" data-i18n="pricing.s_f4">Guías y escalado de dosis diaria</div>
-          </div>
-          <a href="evaluacion.html" class="btn btn-primary" style="width:100%;justify-content:center;background:white;color:var(--color-primary)" data-i18n="pricing.start_assessment_free">Comenzar evaluación</a>
+      <!-- MEDICINE COST ALERT (DISCLAIMER CRÍTICO DE CUMPLIMIENTO) -->
+      <div class="alert alert-warning" style="margin-bottom: 3rem; padding: 1.5rem; border-radius: 12px;">
+        <span style="font-size: 1.5rem; margin-right: 0.75rem;">⚠️</span>
+        <div style="font-size: 0.9rem; line-height: 1.5;">
+          <strong data-i18n="pricing.alert_title">Información Importante sobre el Coste de la Medicación:</strong><br/>
+          <span data-i18n="pricing.alert_text">El coste del medicamento no está incluido en la cuota de suscripción del servicio clínico. La medicación prescrita debe ser adquirida y abonada de forma independiente por el paciente directamente en la oficina de farmacia física de su elección al retirar el producto con la receta electrónica oficial emitida por nuestro equipo médico (el coste del fármaco en farmacia suele oscilar entre 120 € y 250 € al mes según la dosis y molécula clínicamente indicada).</span>
         </div>
       </div>
 
@@ -291,21 +186,21 @@
   </div>
 </section>
 
-<!-- HOW IT WORKS COMPARISON -->
+<!-- HOW IT WORKS INFO -->
 <section class="content-section section-padding-sm" style="background:var(--color-white-08)">
   <div class="container" style="max-width: 800px; text-align: center;">
-    <h2 style="margin-bottom:1.5rem" data-i18n="pricing.how_ship">¿Cómo se gestiona el envío del tratamiento?</h2>
-    <p class="text-p2 text-white-60" style="margin-bottom:2rem" data-i18n="pricing.how_ship_sub">
-      Tras la aprobación del médico, el precio de tu suscripción cubre el medicamento original. Ofrecemos dos alternativas adaptadas a tu comodidad:
+    <h2 style="margin-bottom:1.5rem" data-i18n="pricing.how_work_title">¿Cómo obtengo mi receta oficial?</h2>
+    <p class="text-p2 text-white-60" style="margin-bottom:2rem" data-i18n="pricing.how_work_sub">
+      El proceso de prescripción médica en España está regulado y sigue estrictas garantías de seguridad:
     </p>
     <div style="display:grid; grid-template-columns: 1fr 1fr; gap:24px; text-align:left;">
       <div style="background:white; padding:24px; border-radius:12px; border:1px solid var(--color-white-20);">
-        <h4 style="margin-bottom:10px;" data-i18n="pricing.ship_op1">📦 Envío Directo a Domicilio</h4>
-        <p class="text-p3 text-white-60" data-i18n="pricing.ship_op1_d">Colaboramos con farmacias con licencia de venta online autorizada en España. Recibirás tu pluma en casa en transporte refrigerado certificado de 24h.</p>
+        <h4 style="margin-bottom:10px;" data-i18n="pricing.step_e1_title">1. Diagnóstico Clínico</h4>
+        <p class="text-p3 text-white-60" data-i18n="pricing.step_e1_desc">Completa tu perfil e historial clínico de forma privada. Un médico colegiado evalúa si eres apto para los tratamientos regulados por la AEMPS.</p>
       </div>
       <div style="background:white; padding:24px; border-radius:12px; border:1px solid var(--color-white-20);">
-        <h4 style="margin-bottom:10px;" data-i18n="pricing.ship_op2">🏥 Receta Oficial en tu Farmacia</h4>
-        <p class="text-p3 text-white-60" data-i18n="pricing.ship_op2_d">Si prefieres comprarlo físicamente, emitimos la receta oficial electrónica para que puedas retirar el medicamento de manera directa en tu farmacia de confianza.</p>
+        <h4 style="margin-bottom:10px;" data-i18n="pricing.step_e2_title">2. Receta Electrónica</h4>
+        <p class="text-p3 text-white-60" data-i18n="pricing.step_e2_desc">Si eres apto, el médico emite una receta médica electrónica privada y homologada (con código QR de verificación) válida en cualquier farmacia de España.</p>
       </div>
     </div>
   </div>
@@ -323,7 +218,7 @@
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner" data-i18n="pricing.a1">
-            Si tras revisar tu historial el médico colegiado determina que el tratamiento no es seguro para ti, te devolvemos el 100% de tu dinero de manera automática. No asumes ningún riesgo.
+            Si tras revisar tu historial el médico colegiado determina que el tratamiento no es seguro o indicado para ti, te devolvemos el 100% de la cuota abonada de manera automática. No asumes ningún riesgo.
           </div>
         </div>
       </div>
@@ -334,18 +229,18 @@
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner" data-i18n="pricing.a2">
-            Ninguno. Puedes pausar o cancelar tu suscripción mensual en cualquier momento sin penalizaciones desde tu portal de paciente, o simplemente notificándolo a nuestro servicio de soporte.
+            Ninguno. En la modalidad mensual puedes pausar o cancelar tu suscripción en cualquier momento sin penalizaciones desde tu portal de paciente, o notificándolo a nuestro soporte.
           </div>
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-question" aria-expanded="false">
-          <span data-i18n="pricing.q3">¿El envío a domicilio respeta la cadena de frío?</span>
+          <span data-i18n="pricing.q_pharm">¿Puedo usar la receta en cualquier farmacia?</span>
           <div class="faq-icon">+</div>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner" data-i18n="pricing.a3">
-            Totalmente. Todas las entregas a domicilio de medicamentos inyectables se realizan a través de un servicio de mensajería refrigerada especializado (habitualmente SEUR Frío), asegurando que el producto se mantenga a una temperatura constante de entre 2°C y 8°C.
+          <div class="faq-answer-inner" data-i18n="pricing.a_pharm">
+            Sí. Las recetas electrónicas emitidas por nuestra plataforma cumplen con el Real Decreto 1718/2010 sobre receta médica y son válidas y aceptadas por ley en todas las oficinas de farmacia autorizadas de España.
           </div>
         </div>
       </div>
@@ -356,7 +251,7 @@
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner" data-i18n="pricing.a4">
-            Sí. Tu suscripción mensual cubre todas las consultas de seguimiento online y la renovación automática de la receta electrónica por parte del médico responsable, para que no tengas interrupciones en tu tratamiento.
+            Sí. Tu suscripción cubre todas las consultas periódicas de seguimiento online y la renovación de la receta electrónica por parte del médico responsable en función de tu evolución clínica, para que no tengas interrupciones.
           </div>
         </div>
       </div>
@@ -375,24 +270,6 @@
 </main>
 
 <div id="footer-ph"></div>
-
-<script>
-  function switchPricing(drug) {
-    // Active button
-    document.querySelectorAll('.tab-btn').forEach(btn => {
-      btn.classList.remove('active');
-    });
-    const activeBtn = document.getElementById('btn-' + drug);
-    if (activeBtn) activeBtn.classList.add('active');
-
-    // Display grids
-    document.querySelectorAll('.drug-pricing-section').forEach(sec => {
-      sec.style.display = 'none';
-    });
-    const activeSec = document.getElementById('pricing-' + drug);
-    if (activeSec) activeSec.style.display = 'grid';
-  }
-</script>
 
 <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.23/bundled/lenis.min.js"></script>
 <script src="../js/components.js"></script>
