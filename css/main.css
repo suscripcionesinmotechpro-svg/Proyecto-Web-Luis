@@ -525,6 +525,7 @@ h6 { font-size: 0.875rem; font-weight: 600; color: var(--color-primary); }
 .top-banner {
   position: relative;
   background: var(--gradient-blue);
+  color: #FFFFFF;
   padding: var(--space-3) var(--space-6);
   text-align: center;
   z-index: 999;
@@ -534,16 +535,16 @@ h6 { font-size: 0.875rem; font-weight: 600; color: var(--color-primary); }
   display: flex; align-items: center; justify-content: center; gap: var(--space-4);
   flex-wrap: wrap;
 }
-.top-banner p { font-size: 0.875rem; font-weight: 500; }
+.top-banner p { font-size: 0.875rem; font-weight: 500; color: rgba(255, 255, 255, 0.95); }
 .top-banner .btn { padding: 6px 16px; font-size: 0.8125rem; }
 .top-banner-close {
   position: absolute; right: var(--space-4); top: 50%; transform: translateY(-50%);
   width: 28px; height: 28px; display: flex; align-items: center; justify-content: center;
-  border-radius: 50%; background: var(--color-white-10);
-  color: var(--color-white); font-size: 1rem; cursor: pointer;
+  border-radius: 50%; background: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF; font-size: 1rem; cursor: pointer;
   transition: background var(--duration-fast);
 }
-.top-banner-close:hover { background: var(--color-white-20); }
+.top-banner-close:hover { background: rgba(255, 255, 255, 0.25); }
 
 /* ─────────────────────────────────────────
    HERO
