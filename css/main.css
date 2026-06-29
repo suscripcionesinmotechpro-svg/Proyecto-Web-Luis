@@ -12,23 +12,23 @@
   --color-dark:        #FFFFFF; /* Fondo principal blanco */
   --color-dark-80:     rgba(255, 255, 255, 0.96);
   --color-dark-60:     rgba(255, 255, 255, 0.8);
-  --color-primary:     #21153B; /* Púrpura oscuro del logo */
-  --color-primary-rgb: 33, 21, 59;
-  --color-blue:        #4B5BA3;
-  --color-blue-light:  #6B7BC3;
-  --color-coral:       #FFBE9C;
-  --color-coral-light: #FFD4B8;
-  --color-white:       #21153B; /* Texto principal oscuro */
-  --color-white-60:    #6D6280; /* Texto secundario gris púrpura */
-  --color-white-20:    rgba(33, 21, 59, 0.16); /* Bordes y divisores */
-  --color-white-10:    rgba(33, 21, 59, 0.08);
-  --color-white-08:    rgba(33, 21, 59, 0.04);
+  --color-primary:     #52609E; /* Azul lila del logo oficial */
+  --color-primary-rgb: 82, 96, 158;
+  --color-blue:        #52609E;
+  --color-blue-light:  #6D7AC2;
+  --color-coral:       #FAA484; /* Coral suave del logo oficial */
+  --color-coral-light: #FBC5B2;
+  --color-white:       #52609E; /* Texto principal oscuro basado en el lila */
+  --color-white-60:    #6F789E; /* Texto secundario gris lila */
+  --color-white-20:    rgba(82, 96, 158, 0.16); /* Bordes y divisores */
+  --color-white-10:    rgba(82, 96, 158, 0.08);
+  --color-white-08:    rgba(82, 96, 158, 0.04);
 
   /* Gradients */
-  --gradient-hero:    linear-gradient(135deg, rgba(75,91,163,0.06) 0%, rgba(255,190,156,0.06) 100%);
-  --gradient-card:    linear-gradient(135deg, rgba(33, 21, 59, 0.03) 0%, rgba(33, 21, 59, 0.01) 100%);
-  --gradient-blue:    linear-gradient(135deg, #4B5BA3 0%, #6B7BC3 100%);
-  --gradient-coral:   linear-gradient(135deg, #FFBE9C 0%, #FFD4B8 100%);
+  --gradient-hero:    linear-gradient(135deg, rgba(82,96,158,0.06) 0%, rgba(250,164,132,0.06) 100%);
+  --gradient-card:    linear-gradient(135deg, rgba(82, 96, 158, 0.03) 0%, rgba(82, 96, 158, 0.01) 100%);
+  --gradient-blue:    linear-gradient(135deg, #52609E 0%, #6D7AC2 100%);
+  --gradient-coral:   linear-gradient(135deg, #FAA484 0%, #FBC5B2 100%);
   --gradient-dark:    linear-gradient(180deg, rgba(255,255,255,0) 0%, #FFFFFF 100%);
 
   /* Typography */
@@ -98,7 +98,7 @@ body::before {
   height: 50vw;
   max-width: 600px;
   max-height: 600px;
-  background-image: url("data:image/svg+xml,%3Csvg width='42' height='42' viewBox='0 0 42 42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40.0326 14.55C37.2618 11.786 31.1713 12.0833 29.352 15.7964C28.1391 18.2683 29.2213 20.9541 27.3758 23.7337C25.0076 27.306 18.7551 28.0674 15.634 25.0687C12.2934 21.8563 14.8237 18.0754 11.4778 14.6126C6.06699 9.02204 -3.155 15.9841 1.07959 22.8993C4.0438 27.7493 9.74219 23.9006 13.0253 28.7141C14.6303 31.0661 13.8565 33.3659 14.7557 35.8535C16.5907 40.959 24.1973 41.4962 26.8374 36.7505C28.4423 33.8613 26.7955 30.508 29.8068 27.718C32.4051 25.3086 35.6045 26.4664 38.2603 25.1991C42.2178 23.3113 43.1065 17.6112 40.0326 14.5448V14.55Z' fill='%2321153B'/%3E%3Cpath d='M20.9769 11.2019C24.0779 11.2019 26.5917 8.69429 26.5917 5.60097C26.5917 2.50764 24.0779 0 20.9769 0C17.876 0 15.3622 2.50764 15.3622 5.60097C15.3622 8.69429 17.876 11.2019 20.9769 11.2019Z' fill='%2321153B'/%3E%3C/svg%3E");
+  background-image: url("../assets/images/logo.png");
   background-repeat: no-repeat;
   background-size: contain;
   opacity: 0.025;
@@ -118,12 +118,12 @@ ul { list-style: none; }
 button { cursor: pointer; border: none; background: none; font-family: inherit; }
 
 /* ── Typography Scale ── */
-h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; }
-h2 { font-size: clamp(1.6rem, 3.5vw, 2.5rem); font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; }
-h3 { font-size: clamp(1.2rem, 2.5vw, 1.75rem); font-weight: 600; line-height: 1.3; }
-h4 { font-size: 1.125rem; font-weight: 600; line-height: 1.4; }
-h5 { font-size: 1rem; font-weight: 600; }
-h6 { font-size: 0.875rem; font-weight: 600; }
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; color: var(--color-primary); }
+h2 { font-size: clamp(1.6rem, 3.5vw, 2.5rem); font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; color: var(--color-primary); }
+h3 { font-size: clamp(1.2rem, 2.5vw, 1.75rem); font-weight: 600; line-height: 1.3; color: var(--color-primary); }
+h4 { font-size: 1.125rem; font-weight: 600; line-height: 1.4; color: var(--color-primary); }
+h5 { font-size: 1rem; font-weight: 600; color: var(--color-primary); }
+h6 { font-size: 0.875rem; font-weight: 600; color: var(--color-primary); }
 
 .text-p1 { font-size: 1.125rem; line-height: 1.65; }
 .text-p2 { font-size: 1rem;    line-height: 1.65; }
@@ -358,10 +358,10 @@ h6 { font-size: 0.875rem; font-weight: 600; }
   left: 50%;
   transform: translateX(-50%);
   min-width: 560px;
-  background: rgba(30, 18, 42, 0.97);
+  background: #FFFFFF;
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid var(--color-white-10);
+  border: 1px solid var(--color-white-20);
   border-radius: var(--radius-xl);
   padding: var(--space-6);
   box-shadow: var(--shadow-lg);
@@ -370,6 +370,16 @@ h6 { font-size: 0.875rem; font-weight: 600; }
   transform: translateX(-50%) translateY(-8px);
   transition: all var(--duration-base) var(--ease-smooth);
   pointer-events: none;
+}
+.dropdown-panel::before {
+  content: '';
+  position: absolute;
+  top: -16px;
+  left: 0;
+  right: 0;
+  height: 16px;
+  background: transparent;
+  pointer-events: auto;
 }
 .nav-dropdown:hover .dropdown-panel {
   opacity: 1;
@@ -398,10 +408,15 @@ h6 { font-size: 0.875rem; font-weight: 600; }
 .dropdown-item-icon {
   width: 40px; height: 40px;
   border-radius: var(--radius-sm);
-  background: var(--gradient-blue);
+  background: var(--color-white-08);
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
-  font-size: 1.2rem;
+  overflow: hidden;
+}
+.dropdown-item-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .dropdown-item-text { flex: 1; min-width: 0; }
 .dropdown-item-name { font-size: 0.9375rem; font-weight: 500; }
