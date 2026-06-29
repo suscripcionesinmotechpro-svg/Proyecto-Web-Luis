@@ -170,14 +170,38 @@
 .pricing-card.featured {
   background: var(--gradient-blue);
   border-color: transparent;
+  color: #FFFFFF;
+}
+.pricing-card.featured .pricing-name,
+.pricing-card.featured .pricing-period,
+.pricing-card.featured .pricing-desc {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+.pricing-card.featured .pricing-price {
+  color: #FFFFFF !important;
+}
+.pricing-card.featured .pricing-feature {
+  color: rgba(255, 255, 255, 0.9) !important;
 }
 .pricing-badge {
-  position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
-  background: var(--color-coral);
-  color: var(--color-dark);
-  padding: 4px 16px;
+  position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+  background: linear-gradient(135deg, #F5D78E 0%, #E8A84C 40%, #F5D78E 70%, #C98A28 100%);
+  background-size: 200% 200%;
+  animation: shimmerGold 3s ease-in-out infinite;
+  color: #5C3A00;
+  padding: 5px 20px;
   border-radius: var(--radius-full);
-  font-size: 0.75rem; font-weight: 700;
+  font-size: 0.7rem; font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  box-shadow: 0 2px 12px rgba(229, 160, 60, 0.55), 0 1px 0 rgba(255,255,255,0.4) inset;
+  white-space: nowrap;
+  border: 1px solid rgba(255, 220, 120, 0.6);
+}
+@keyframes shimmerGold {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 .pricing-name    { font-size: 1rem; font-weight: 600; }
 .pricing-price   { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.04em; line-height: 1; }
