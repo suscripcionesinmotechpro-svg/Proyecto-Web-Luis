@@ -16,7 +16,7 @@
   --color-primary-rgb: 65, 80, 143;
   --color-blue:        #358585; /* Teal de acento del logo oficial */
   --color-blue-light:  #439A9A;
-  --color-coral:       #FAA484; /* Coral suave del logo oficial */
+  --color-coral:       #D94F3D; /* Coral oscuro premium contrastado */ /* Coral suave del logo oficial */
   --color-coral-light: #FBC5B2;
   --color-white:       #283152; /* Texto principal oscuro (azul marino oscuro para legibilidad) */
   --color-white-60:    #59668F; /* Texto secundario gris azulado */
@@ -28,7 +28,7 @@
   --gradient-hero:    linear-gradient(135deg, rgba(65,80,143,0.06) 0%, rgba(250,164,132,0.06) 100%);
   --gradient-card:    linear-gradient(135deg, rgba(65, 80, 143, 0.03) 0%, rgba(65, 80, 143, 0.01) 100%);
   --gradient-blue:    linear-gradient(135deg, #41508F 0%, #6070B0 100%);
-  --gradient-coral:   linear-gradient(135deg, #FAA484 0%, #FBC5B2 100%);
+  --gradient-coral:   linear-gradient(135deg, #D94F3D 0%, #FBC5B2 100%);
   --gradient-dark:    linear-gradient(180deg, rgba(255,255,255,0) 0%, #FFFFFF 100%);
 
   /* Typography */
