@@ -350,8 +350,12 @@ function applyTranslations(lang) {
 function initI18n() {
   applyTranslations(currentLang);
 
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', () => applyTranslations(btn.dataset.lang));
+  // Utilizar delegación de eventos para botones dinámicos inyectados por components.js
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('.lang-btn');
+    if (btn && btn.dataset.lang) {
+      applyTranslations(btn.dataset.lang);
+    }
   });
 }
 
