@@ -573,9 +573,10 @@ h6 { font-size: 0.875rem; font-weight: 600; color: var(--color-primary); }
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(255,255,255,0.85) 0%,
-    rgba(255,255,255,0.6) 50%,
-    rgba(255,255,255,0.1) 100%
+    rgba(255,255,255,0.94) 0%,
+    rgba(255,255,255,0.65) 45%,
+    rgba(255,255,255,0.1) 75%,
+    rgba(255,255,255,0) 100%
   );
 }
 .hero-bg-overlay {
@@ -583,7 +584,7 @@ h6 { font-size: 0.875rem; font-weight: 600; color: var(--color-primary); }
   inset: 0;
   background: var(--gradient-hero);
   mix-blend-mode: overlay;
-  opacity: 0.6;
+  opacity: 0.22; /* Reduced opacity to allow high brightness and sharp details of the clinic photo */
 }
 
 .hero-content {
