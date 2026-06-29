@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portal de Paciente · Bajar Peso</title>
+  <meta name="description" content="Gestiona tu consulta médica, descarga tus recetas electrónicas oficiales y realiza el seguimiento de tu peso en Bajar Peso."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../../css/main.css"/>
+  <link rel="stylesheet" href="../../css/pages.css"/>
+</head>
+<body>
+<script>window.BASE_PATH='../../';</script>
+<div id="nav-ph"></div>
+<div id="mob-ph"></div>
+
+<main style="min-height:100vh;padding-top:120px;padding-bottom:60px">
+  <div class="container">
+
+    <!-- Header Section -->
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem;flex-wrap:wrap;gap:1rem">
+      <div>
+        <h1 style="font-size:2rem;margin-bottom:4px" id="portalWelcome">Hola, Paciente</h1>
+        <p style="color:rgba(255,255,255,0.6);font-size:0.95rem">Bienvenido a tu panel de seguimiento médico.</p>
+      </div>
+      <button class="btn btn-outline" id="btnLogout" style="font-size:0.875rem">Cerrar sesión</button>
+    </div>
+
+    <div class="contact-grid" style="grid-template-columns:1.5fr 1fr;gap:2rem">
+
+      <!-- Left Column: Status, Recetas and Progress -->
+      <div style="display:flex;flex-direction:column;gap:2rem">
+
+        <!-- Status Card -->
+        <div class="glass-card" style="padding:2rem">
+          <div class="section-tag" style="margin-bottom:0.5rem"><span class="dot"></span><span>Estado del tratamiento</span></div>
+          <h2 style="font-size:1.5rem" id="statusTitle">Cargando estado...</h2>
+          <p id="statusDesc" style="color:rgba(255,255,255,0.7);margin-top:0.5rem">Espera mientras obtenemos los detalles de tu consulta médica.</p>
+          <div id="statusAlert" class="alert alert-info" style="display:none;margin-top:1rem"></div>
+        </div>
+
+        <!-- Prescriptions list -->
+        <div class="glass-card" style="padding:2rem">
+          <div class="section-tag" style="margin-bottom:0.5rem"><span class="dot"></span><span>Recetas electrónicas</span></div>
+          <h2 style="font-size:1.5rem;margin-bottom:1.5rem">Tus recetas médicas</h2>
+          <div id="prescriptionsList" style="display:flex;flex-direction:column;gap:1rem">
+            <p style="color:rgba(255,255,255,0.5)">No hay recetas disponibles todavía. Aparecerán aquí una vez aprobado tu tratamiento.</p>
+          </div>
+        </div>
+
+        <!-- Weight Tracking & IMC -->
+        <div class="glass-card" style="padding:2rem">
+          <div class="section-tag" style="margin-bottom:0.5rem"><span class="dot"></span><span>Control de progreso</span></div>
+          <h2 style="font-size:1.5rem;margin-bottom:1rem">Registro de peso</h2>
+          <p style="color:rgba(255,255,255,0.6);font-size:0.9rem;margin-bottom:1.5rem">Añade tu peso actual periódicamente para ver el progreso de tu IMC.</p>
+
+          <form id="weightForm" style="display:flex;gap:1rem;margin-bottom:2rem;flex-wrap:wrap">
+            <div class="input-group" style="flex:1;min-width:140px">
+              <label class="input-label" for="ptWeight">Peso actual (kg)</label>
+              <input type="number" id="ptWeight" step="0.1" class="input-field" placeholder="85.5" required/>
+            </div>
+            <button type="submit" class="btn btn-primary" style="align-self:flex-end">Añadir registro</button>
+          </form>
+
+          <div style="overflow-x:auto">
+            <table class="comparison-table" id="weightLogsTable" style="margin-top:1rem">
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th>Peso (kg)</th>
+                  <th>IMC</th>
+                  <th>Cambio</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="4" style="text-align:center;color:rgba(255,255,255,0.5)">Cargando historial de peso...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Support & Chat -->
+      <div style="display:flex;flex-direction:column;gap:2rem">
+
+        <!-- Info Card -->
+        <div class="glass-card" style="padding:2rem;background:linear-gradient(135deg,rgba(75,91,163,0.1),rgba(255,190,156,0.05))">
+          <h3 style="margin-bottom:0.5rem">Tu Médico</h3>
+          <p style="font-size:0.9rem;font-weight:600;color:var(--color-coral)">Dr. [Nombre del Médico]</p>
+          <p style="font-size:0.8rem;color:rgba(255,255,255,0.5);margin-top:2px">Colegiado nº 292913499 (Málaga)</p>
+          <p style="font-size:0.875rem;color:rgba(255,255,255,0.7);margin-top:1rem">Para emergencias médicas o si presentas reacciones adversas graves, acude de inmediato a urgencias o llama al 112.</p>
+        </div>
+
+        <!-- Secure Chat -->
+        <div class="glass-card" style="padding:2rem;display:flex;flex-direction:column;height:480px">
+          <div class="section-tag" style="margin-bottom:0.5rem"><span class="dot"></span><span>Consulta segura</span></div>
+          <h3 style="margin-bottom:1rem">Mensajería con tu Doctor</h3>
+
+          <!-- Messages display area -->
+          <div id="chatMessages" style="flex:1;overflow-y:auto;background:rgba(0,0,0,0.15);border-radius:6px;padding:1rem;margin-bottom:1rem;display:flex;flex-direction:column;gap:0.75rem;font-size:0.875rem">
+            <div style="color:rgba(255,255,255,0.4);text-align:center;margin:auto">No hay mensajes anteriores con tu doctor. Puedes enviarle tu primera duda a continuación.</div>
+          </div>
+
+          <!-- Input area -->
+          <form id="chatForm" style="display:flex;gap:0.5rem">
+            <input type="text" id="chatInput" class="input-field" placeholder="Escribe tu consulta médica..." required autocomplete="off"/>
+            <button type="submit" class="btn btn-primary" style="padding:0.75rem 1.25rem">Enviar</button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+<div id="footer-ph"></div>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.23/bundled/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../../js/components.js"></script>
+<script src="../../js/i18n.js"></script>
+<script src="../../js/auth.js"></script>
+<script src="../../js/portal.js"></script>
+</body>
+</html>

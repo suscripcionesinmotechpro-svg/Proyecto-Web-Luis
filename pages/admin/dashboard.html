@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CRM Médico · Bajar Peso</title>
+  <meta name="description" content="Gestión y revisión médica de recetas y pacientes en Bajar Peso."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../../css/main.css"/>
+  <link rel="stylesheet" href="../../css/pages.css"/>
+  <style>
+    .admin-nav {
+      display: flex;
+      gap: 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      margin-bottom: 2rem;
+    }
+    .admin-nav-btn {
+      background: none;
+      border: none;
+      color: rgba(255,255,255,0.6);
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+    .admin-nav-btn.active {
+      color: var(--color-coral);
+      border-bottom-color: var(--color-coral);
+    }
+    .eval-row {
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .eval-row:hover {
+      background: rgba(255,255,255,0.04);
+    }
+    .eval-row.selected {
+      background: rgba(255,190,156,0.1);
+    }
+    .warning-badge {
+      background: rgba(239, 83, 80, 0.2);
+      color: #EF5350;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+    .info-badge {
+      background: rgba(75, 91, 163, 0.2);
+      color: #6B7BC3;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+<script>window.BASE_PATH='../../';</script>
+<div id="nav-ph"></div>
+<div id="mob-ph"></div>
+
+<main style="min-height:100vh;padding-top:120px;padding-bottom:60px">
+  <div class="container">
+
+    <!-- Header Section -->
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem;flex-wrap:wrap;gap:1rem">
+      <div>
+        <h1 style="font-size:2rem;margin-bottom:4px">CRM de Gestión Médica</h1>
+        <p style="color:rgba(255,255,255,0.6);font-size:0.95rem">Panel exclusivo para el médico responsable del servicio.</p>
+      </div>
+      <button class="btn btn-outline" id="btnLogout" style="font-size:0.875rem">Cerrar sesión</button>
+    </div>
+
+    <!-- Tabs Navigation -->
+    <div class="admin-nav">
+      <button class="admin-nav-btn active" id="tabEvaluations">Evaluaciones pendientes</button>
+      <button class="admin-nav-btn" id="tabPatients">Directorio de Pacientes</button>
+    </div>
+
+    <!-- Content Areas -->
+    <div class="contact-grid" style="grid-template-columns:1.2fr 1.8fr;gap:2rem">
+
+      <!-- Left Panel: List (Evaluations or Patients) -->
+      <div class="glass-card" style="padding:1.5rem;display:flex;flex-direction:column;max-height:800px;overflow-y:auto">
+        <h2 style="font-size:1.25rem;margin-bottom:1.5rem" id="listTitle">Evaluaciones Recibidas</h2>
+
+        <!-- Pending evaluations list -->
+        <div id="evaluationsContainer">
+          <table class="comparison-table" style="font-size:0.85rem">
+            <thead>
+              <tr>
+                <th>Paciente</th>
+                <th>IMC</th>
+                <th>Fecha</th>
+              </tr>
+            </thead>
+            <tbody id="evaluationsTableBody">
+              <tr>
+                <td colspan="3" style="text-align:center;color:rgba(255,255,255,0.5)">Cargando evaluaciones...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Patients list (hidden by default) -->
+        <div id="patientsContainer" style="display:none">
+          <table class="comparison-table" style="font-size:0.85rem">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Ficha</th>
+              </tr>
+            </thead>
+            <tbody id="patientsTableBody">
+              <tr>
+                <td colspan="3" style="text-align:center;color:rgba(255,255,255,0.5)">Cargando pacientes...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Right Panel: Detailed view (Evaluation Detail or Patient Detail + Chat) -->
+      <div style="display:flex;flex-direction:column;gap:2rem">
+
+        <!-- Detail Card -->
+        <div class="glass-card" style="padding:2rem;min-height:400px" id="detailPanel">
+          <div style="display:flex;justify-content:center;align-items:center;height:100%;min-height:300px;color:rgba(255,255,255,0.4)">
+            Selecciona una evaluación o un paciente de la lista para ver sus detalles.
+          </div>
+        </div>
+
+        <!-- Action / Emisión Receta Form (visible when evaluation is active) -->
+        <div class="glass-card" style="padding:2rem;display:none" id="actionPanel">
+          <h3 style="font-size:1.25rem;margin-bottom:1.5rem">Acciones Clínicas</h3>
+
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2rem">
+            <button class="btn btn-primary" id="btnApproveAction" style="background:#81C784;color:black">Aprobar Tratamiento</button>
+            <button class="btn btn-outline" id="btnRejectAction" style="color:#EF5350;border-color:#EF5350">Rechazar / No elegible</button>
+          </div>
+
+          <!-- Approve prescription form -->
+          <form id="approveForm" style="display:none;flex-direction:column;gap:1.25rem;border-top:1px solid rgba(255,255,255,0.1);padding-top:1.5rem">
+            <h4 style="font-size:1.1rem;color:var(--color-coral)">Emitir Receta Electrónica</h4>
+
+            <div class="input-group">
+              <label class="input-label" for="rxMed">Medicamento prescrito</label>
+              <select id="rxMed" class="input-field" style="background:#281634;color:white" required>
+                <option value="Mounjaro">Mounjaro (Tirzepatida)</option>
+                <option value="Wegovy">Wegovy (Semaglutida)</option>
+                <option value="Ozempic">Ozempic (Semaglutida)</option>
+                <option value="Saxenda">Saxenda (Liraglutida)</option>
+              </select>
+            </div>
+
+            <div class="input-group">
+              <label class="input-label" for="rxDose">Dosis inicial / mensual</label>
+              <input type="text" id="rxDose" class="input-field" placeholder="ej: 2.5 mg semanal" required/>
+            </div>
+
+            <div class="input-group">
+              <label class="input-label" for="rxPdf">URL de Receta Electrónica (PDF)</label>
+              <input type="url" id="rxPdf" class="input-field" placeholder="https://ejemplo.com/recetas/pdf_receta.pdf" required/>
+              <p style="font-size:0.75rem;color:rgba(255,255,255,0.5);margin-top:2px">Sube la receta desde tu panel de REMPe/Docline y copia el enlace de descarga aquí.</p>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Confirmar Prescripción y Notificar al Paciente</button>
+          </form>
+        </div>
+
+        <!-- Messaging Chat (visible when patient detail is active) -->
+        <div class="glass-card" style="padding:2rem;display:none;height:450px" id="adminChatPanel">
+          <h3 style="font-size:1.25rem;margin-bottom:1rem">Chat Directo con el Paciente</h3>
+          <div id="adminChatMessages" style="flex:1;overflow-y:auto;background:rgba(0,0,0,0.15);border-radius:6px;padding:1rem;margin-bottom:1rem;display:flex;flex-direction:column;gap:0.75rem;font-size:0.875rem">
+            <div style="color:rgba(255,255,255,0.4);text-align:center;margin:auto">Selecciona un paciente para ver la mensajería.</div>
+          </div>
+          <form id="adminChatForm" style="display:flex;gap:0.5rem">
+            <input type="text" id="adminChatInput" class="input-field" placeholder="Escribe un mensaje médico al paciente..." required autocomplete="off"/>
+            <button type="submit" class="btn btn-primary" style="padding:0.75rem 1.25rem">Enviar</button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+<div id="footer-ph"></div>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.23/bundled/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../../js/components.js"></script>
+<script src="../../js/i18n.js"></script>
+<script src="../../js/auth.js"></script>
+<script src="../../js/admin.js"></script>
+</body>
+</html>

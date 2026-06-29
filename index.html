@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- SEO -->
+  <title>Bajar Peso · Clínica de Pérdida de Peso Online | Tratamientos GLP-1 con Médico</title>
+  <meta name="description" content="Clínica médica online especializada en pérdida de peso. Tratamientos GLP-1 aprobados por AEMPS: Mounjaro, Wegovy, Ozempic, Saxenda. Prescripción médica incluida. Médico colegiado español."/>
+  <meta property="og:title" content="Bajar Peso · Clínica de Pérdida de Peso Online"/>
+  <meta property="og:description" content="Tratamientos GLP-1 con médico colegiado español. Mounjaro, Wegovy, Ozempic, Saxenda. Evaluación online en 10 minutos."/>
+  <meta property="og:type" content="website"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <link rel="canonical" href="https://bajarpeso.es/"/>
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "Bajar Peso",
+    "url": "https://bajarpeso.es",
+    "description": "Clínica médica online especializada en tratamientos GLP-1 para pérdida de peso bajo prescripción médica en España.",
+    "areaServed": { "@type": "Country", "name": "Spain" },
+    "medicalSpecialty": "Obesity Medicine",
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "512" }
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css"/>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     COOKIE BANNER
+══════════════════════════════════════ -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
+  <div class="cookie-inner glass-card">
+    <div class="cookie-header">
+      <h3 class="cookie-title" data-i18n="cookie.title">Hablemos de las cookies</h3>
+    </div>
+    <p class="cookie-text" data-i18n="cookie.text">
+      Usamos cookies para mejorar tu experiencia…
+    </p>
+    <div class="cookie-btns">
+      <button class="btn btn-primary" id="cookieAcceptAll" data-i18n="cookie.accept_all">Aceptar Todo</button>
+      <button class="btn btn-outline" id="cookieReject" data-i18n="cookie.reject">Rechazar todo</button>
+      <button class="btn btn-outline" id="cookieCustomize" data-i18n="cookie.customize">Personalizar</button>
+    </div>
+    <div class="cookie-options" id="cookieOptions">
+      <div class="cookie-checkboxes">
+        <label class="cookie-check-label">
+          <input type="checkbox" id="ck-necessary" checked disabled/>
+          <span data-i18n="cookie.necessary">Funcionalidad</span>
+        </label>
+        <label class="cookie-check-label">
+          <input type="checkbox" id="ck-analytics" checked/>
+          <span data-i18n="cookie.analytics">Analíticas</span>
+        </label>
+        <label class="cookie-check-label">
+          <input type="checkbox" id="ck-marketing" checked/>
+          <span data-i18n="cookie.marketing">Publicidad</span>
+        </label>
+        <label class="cookie-check-label">
+          <input type="checkbox" id="ck-personal" checked/>
+          <span data-i18n="cookie.personal">Personalización</span>
+        </label>
+      </div>
+      <button class="btn btn-primary" id="cookieAcceptSel" data-i18n="cookie.accept_sel">Guardar selección</button>
+    </div>
+  </div>
+</div>
+<button class="cookie-toggle-btn" id="cookieToggle" title="Cookies" aria-label="Cookie settings">🍪</button>
+
+<!-- ══════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════ -->
+<header class="navbar" id="navbar" role="banner">
+  <div class="container">
+    <nav class="navbar-inner" aria-label="Main navigation">
+
+      <!-- Logo -->
+      <a href="/" class="navbar-logo" aria-label="Bajar Peso - Inicio">
+        <!-- SVG organic logo mark (same style as original) -->
+        <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M28 10.5C25.6 8.1 20.5 8.3 19 11.5C18 13.6 19 15.9 17.4 18.2C15.4 21.2 10.2 21.8 7.7 19.2C5 16.5 7.1 13.4 4.4 10.6C0 6.2 -7 12 -3.5 17.8C-1 21.8 3.5 18.7 6.1 22.5C7.4 24.4 6.7 26.3 7.5 28.4C9 32.4 15.3 32.8 17.5 28.8C18.8 26.5 17.5 23.7 19.9 21.5C22 19.5 24.6 20.5 26.8 19.4C30 17.8 30.7 13.1 28 10.5Z" fill="currentColor" transform="translate(12,0) scale(0.75)"/>
+          <circle cx="20" cy="5" r="4.5" fill="currentColor"/>
+        </svg>
+        <div>
+          <div class="logo-text">Bajar Peso</div>
+          <div class="logo-sub">bajarpeso.es</div>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <div class="nav-links" role="list">
+
+        <!-- About -->
+        <a href="pages/sobre-nosotros.html" class="nav-link" role="listitem" data-i18n="nav.about">Sobre Nosotros</a>
+
+        <!-- Treatments Dropdown -->
+        <div class="nav-dropdown nav-link" role="listitem">
+          <div class="nav-dropdown-toggle" aria-haspopup="true">
+            <span data-i18n="nav.treatments">Tratamientos</span>
+            <svg class="nav-dropdown-arrow" viewBox="0 0 11 6" fill="none" aria-hidden="true">
+              <path d="M0.5 0.5L5 5 9.5 0.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="dropdown-panel" role="menu">
+            <div class="dropdown-heading" data-i18n="nav.our_treatments">Nuestros Tratamientos</div>
+            <div class="dropdown-grid">
+              <a href="pages/tratamiento-mounjaro.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon">💉</div>
+                <div class="dropdown-item-text">
+                  <div class="dropdown-item-name" data-i18n="treatments.mounjaro_title">Mounjaro</div>
+                  <div class="dropdown-item-desc" data-i18n="nav.mounjaro_desc">Control efectivo del peso.</div>
+                </div>
+                <span class="dropdown-arrow-sm">↗</span>
+              </a>
+              <a href="pages/tratamiento-wegovy.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon">💊</div>
+                <div class="dropdown-item-text">
+                  <div class="dropdown-item-name" data-i18n="treatments.wegovy_title">Wegovy</div>
+                  <div class="dropdown-item-desc" data-i18n="nav.wegovy_desc">Te ayuda a sentirte saciado.</div>
+                </div>
+                <span class="dropdown-arrow-sm">↗</span>
+              </a>
+              <a href="pages/tratamiento-ozempic.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon">🔬</div>
+                <div class="dropdown-item-text">
+                  <div class="dropdown-item-name" data-i18n="treatments.ozempic_title">Ozempic</div>
+                  <div class="dropdown-item-desc" data-i18n="nav.ozempic_desc">Mejora el control glucémico.</div>
+                </div>
+                <span class="dropdown-arrow-sm">↗</span>
+              </a>
+              <a href="pages/tratamiento-saxenda.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon">⚕️</div>
+                <div class="dropdown-item-text">
+                  <div class="dropdown-item-name" data-i18n="treatments.saxenda_title">Saxenda</div>
+                  <div class="dropdown-item-desc" data-i18n="nav.saxenda_desc">Controla el apetito.</div>
+                </div>
+                <span class="dropdown-arrow-sm">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- How it Works Dropdown -->
+        <div class="nav-dropdown nav-link" role="listitem">
+          <div class="nav-dropdown-toggle" aria-haspopup="true">
+            <span data-i18n="nav.how">Cómo Funciona</span>
+            <svg class="nav-dropdown-arrow" viewBox="0 0 11 6" fill="none" aria-hidden="true">
+              <path d="M0.5 0.5L5 5 9.5 0.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="dropdown-panel" style="min-width:400px" role="menu">
+            <div class="dropdown-heading" data-i18n="nav.our_programs">Nuestros Programas</div>
+            <div class="dropdown-grid" style="grid-template-columns:1fr">
+              <a href="pages/como-funciona.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon">⚙️</div>
+                <div class="dropdown-item-text">
+                  <div class="dropdown-item-name" data-i18n="nav.how_works">Cómo funciona</div>
+                  <div class="dropdown-item-desc" data-i18n="nav.how_works_desc">Paso a paso hacia tu objetivo</div>
+                </div>
+                <span class="dropdown-arrow-sm">↗</span>
+              </a>
+              <a href="pages/precios.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon">💶</div>
+                <div class="dropdown-item-text">
+                  <div class="dropdown-item-name" data-i18n="nav.pricing">Precios</div>
+                  <div class="dropdown-item-desc" data-i18n="nav.pricing_desc">Encuentra tu plan perfecto</div>
+                </div>
+                <span class="dropdown-arrow-sm">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="pages/blog.html" class="nav-link" role="listitem" data-i18n="nav.blog">Blog</a>
+        <a href="pages/testimonios.html" class="nav-link" role="listitem" data-i18n="nav.testimonials">Testimonios</a>
+      </div>
+
+      <!-- CTA area -->
+      <div class="nav-cta">
+        <!-- Language switcher -->
+        <div class="lang-switcher" role="group" aria-label="Language selector">
+          <button class="lang-btn active" data-lang="es" id="btnEs">ES</button>
+          <button class="lang-btn" data-lang="en" id="btnEn">EN</button>
+        </div>
+
+        <a href="pages/acceso-pacientes.html" class="nav-login" aria-label="Acceso pacientes">
+          <svg class="nav-login-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M10 10.65c-.06-.01-.14-.01-.2 0C8.43 10.6 7.27 9.4 7.27 7.93 7.27 6.42 8.48 5.2 10 5.2c1.51 0 2.74 1.22 2.74 2.73-.01 1.47-1.17 2.67-2.74 2.72Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15.62 16.15c-1.48 1.36-3.45 2.18-5.62 2.18-2.17 0-4.13-.82-5.62-2.18.08-.78.58-1.55 1.47-2.15 2.28-1.52 6.01-1.52 8.27 0 .9.6 1.4 1.37 1.5 2.15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10 18.33c4.6 0 8.33-3.73 8.33-8.33S14.6 1.67 10 1.67 1.67 5.4 1.67 10 5.4 18.33 10 18.33Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span data-i18n="nav.login">Acceso Pacientes</span>
+        </a>
+
+        <a href="pages/evaluacion.html" class="btn btn-primary" id="navCta" data-i18n="nav.cta">Iniciar Evaluación</a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true" role="dialog">
+  <nav>
+    <a href="pages/sobre-nosotros.html" class="mobile-nav-link" data-i18n="nav.about">Sobre Nosotros</a>
+
+    <div class="mobile-nav-link" id="mobileDropTreat" style="cursor:pointer">
+      <span data-i18n="nav.treatments">Tratamientos</span>
+      <span>›</span>
+    </div>
+    <div class="mobile-sub-links" id="mobileSubTreat">
+      <a href="pages/tratamiento-mounjaro.html" class="mobile-sub-link">💉 Mounjaro</a>
+      <a href="pages/tratamiento-wegovy.html"   class="mobile-sub-link">💊 Wegovy</a>
+      <a href="pages/tratamiento-ozempic.html"  class="mobile-sub-link">🔬 Ozempic</a>
+      <a href="pages/tratamiento-saxenda.html"  class="mobile-sub-link">⚕️ Saxenda</a>
+    </div>
+
+    <div class="mobile-nav-link" id="mobileDropHow" style="cursor:pointer">
+      <span data-i18n="nav.how">Cómo Funciona</span>
+      <span>›</span>
+    </div>
+    <div class="mobile-sub-links" id="mobileSubHow">
+      <a href="pages/como-funciona.html" class="mobile-sub-link">⚙️ <span data-i18n="nav.how_works">Cómo funciona</span></a>
+      <a href="pages/precios.html"       class="mobile-sub-link">💶 <span data-i18n="nav.pricing">Precios</span></a>
+    </div>
+
+    <a href="pages/blog.html"        class="mobile-nav-link" data-i18n="nav.blog">Blog</a>
+    <a href="pages/testimonios.html" class="mobile-nav-link" data-i18n="nav.testimonials">Testimonios</a>
+
+    <div class="mobile-cta-wrapper">
+      <div class="lang-switcher" style="width:fit-content">
+        <button class="lang-btn active" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <a href="pages/evaluacion.html" class="btn btn-primary" data-i18n="nav.cta">Iniciar Evaluación</a>
+      <a href="pages/acceso-pacientes.html" class="btn btn-outline" data-i18n="nav.login">Acceso Pacientes</a>
+    </div>
+  </nav>
+</div>
+
+<!-- ══════════════════════════════════════
+     TOP INFO BANNER
+══════════════════════════════════════ -->
+<div class="top-banner" id="topBanner" role="banner" aria-label="Información importante">
+  <div class="top-banner-inner">
+    <p data-i18n="banner.text">Consulta médica online con prescripción — Tu salud, nuestra prioridad</p>
+    <a href="pages/evaluacion.html" class="btn btn-dark" data-i18n="banner.cta">¿Soy elegible?</a>
+  </div>
+  <button class="top-banner-close" id="topBannerClose" aria-label="Cerrar aviso">×</button>
+</div>
+
+<main id="main-content">
+
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<section class="hero" id="home" aria-label="Sección principal">
+  <div class="hero-bg">
+    <img src="assets/images/hero-background.png"
+         alt="Mujeres felices y saludables — pérdida de peso médicamente guiada"
+         loading="eager"
+         width="1440" height="900"/>
+    <div class="hero-bg-overlay" aria-hidden="true"></div>
+  </div>
+
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-left">
+        <!-- Tag -->
+        <div class="section-tag orange" id="heroTag">
+          <span class="dot" aria-hidden="true"></span>
+          <span data-i18n="hero.tag">Regulado por AEMPS</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="hero-title" data-i18n="hero.title">
+          Pérdida de Peso Guiada Médicamente con Medicación y Seguimiento
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-p1 hero-subtitle" data-i18n="hero.subtitle">
+          Guiados por expertos que se preocupan, respaldados por la ciencia que te mantiene en camino.
+        </p>
+
+        <!-- CTA + Trust Badge -->
+        <div class="hero-cta-row">
+          <a href="pages/evaluacion.html" class="btn btn-primary" id="heroCta" data-i18n="hero.cta">¿Soy elegible?</a>
+          <div class="tp-widget" role="complementary" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);padding:0.75rem 1.25rem" aria-label="Garantías Médicas">
+            <div style="font-size:0.75rem;color:var(--color-coral);font-weight:700;text-transform:uppercase;letter-spacing:1px">Servicio Médico</div>
+            <div style="font-size:0.875rem;font-weight:600;margin-top:2px">100% Confidencial y Colegiado</div>
+          </div>
+        </div>
+
+        <!-- Glass trust badges -->
+        <div class="hero-glass-row">
+          <div class="hero-badge">
+            <span class="hero-badge-icon" aria-hidden="true">👥</span>
+            <span><strong data-i18n="hero.trust1b">Más de 500</strong> <span data-i18n="hero.trust1">pacientes atendidos</span></span>
+          </div>
+          <div class="hero-badge">
+            <span class="hero-badge-icon" aria-hidden="true">🏥</span>
+            <span data-i18n="hero.trust2">Soporte médico continuo</span>
+          </div>
+          <div class="hero-badge">
+            <span class="hero-badge-icon" aria-hidden="true">🧬</span>
+            <span data-i18n="hero.trust3">Respaldado clínicamente</span>
+          </div>
+          <div class="hero-badge">
+            <span class="hero-badge-icon" aria-hidden="true">📋</span>
+            <span data-i18n="hero.trust4">Programa basado en la ciencia</span>
+          </div>
+        </div>
+      </div>
+      <!-- Right side is the hero image (visible in bg) -->
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     GUARANTEES BAR
+     ====================================== -->
+<section class="partners" aria-label="Garantías del servicio" style="padding:1.5rem 0;border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.01)">
+  <div class="container" style="display:flex;justify-content:space-around;gap:2rem;flex-wrap:wrap;text-align:center">
+    <div style="display:flex;align-items:center;gap:0.75rem"><span style="font-size:1.5rem">🩺</span><span style="font-size:0.875rem;font-weight:600;color:rgba(255,255,255,0.8)">Médicos Colegiados en España</span></div>
+    <div style="display:flex;align-items:center;gap:0.75rem"><span style="font-size:1.5rem">🔒</span><span style="font-size:0.875rem;font-weight:600;color:rgba(255,255,255,0.8)">Privacidad RGPD (Datos Médicos Cifrados)</span></div>
+    <div style="display:flex;align-items:center;gap:0.75rem"><span style="font-size:1.5rem">🇪🇸</span><span style="font-size:0.875rem;font-weight:600;color:rgba(255,255,255,0.8)">Receta Homologada para cualquier Farmacia</span></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     TREATMENTS
+══════════════════════════════════════ -->
+<section class="section-padding" id="tratamientos" aria-labelledby="treatments-title">
+  <div class="container">
+    <div class="treatments-header">
+      <div class="section-tag">
+        <span class="dot" aria-hidden="true"></span>
+        <span data-i18n="treatments.tag">Tratamientos</span>
+      </div>
+      <div class="treatments-header-row">
+        <h2 id="treatments-title" class="reveal" data-i18n="treatments.title">Medicamentos GLP-1 Aprobados</h2>
+        <a href="pages/tratamientos.html" class="btn btn-outline reveal" data-i18n="treatments.cta">Ver todos los Tratamientos</a>
+      </div>
+      <p class="text-p2 text-white-60 reveal" style="max-width:640px" data-i18n="treatments.subtitle">
+        Todos nuestros tratamientos están aprobados por la AEMPS y son prescritos por médicos colegiados españoles tras una evaluación médica completa.
+      </p>
+    </div>
+
+    <div class="treatments-grid">
+
+      <!-- Mounjaro -->
+      <article class="treatment-card reveal">
+        <div class="flex-between">
+          <div class="treatment-icon-wrap mounjaro" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" fill="rgba(107,123,195,0.9)"/>
+            </svg>
+          </div>
+          <span class="treatment-badge" data-i18n="treatments.badge">Con receta médica</span>
+        </div>
+        <div>
+          <h3 class="treatment-name" data-i18n="treatments.mounjaro_title">Mounjaro</h3>
+          <p class="treatment-desc" data-i18n="treatments.mounjaro_desc">Control efectivo del peso corporal mediante agonismo dual GIP/GLP-1.</p>
+        </div>
+        <a href="pages/tratamiento-mounjaro.html" class="treatment-link" aria-label="Ver tratamiento Mounjaro">
+          <span data-i18n="treatments.explore">Ver tratamiento</span>
+          <span class="treatment-link-icon" aria-hidden="true">↗</span>
+        </a>
+      </article>
+
+      <!-- Wegovy -->
+      <article class="treatment-card reveal reveal-delay-1">
+        <div class="flex-between">
+          <div class="treatment-icon-wrap wegovy" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+              <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="rgba(255,190,156,0.9)" stroke-width="2"/>
+              <path d="M8 12L11 15L16 9" stroke="rgba(255,190,156,0.9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="treatment-badge" data-i18n="treatments.badge">Con receta médica</span>
+        </div>
+        <div>
+          <h3 class="treatment-name" data-i18n="treatments.wegovy_title">Wegovy</h3>
+          <p class="treatment-desc" data-i18n="treatments.wegovy_desc">Te ayuda a sentirte saciado por más tiempo. Tratamiento semanal de semaglutida.</p>
+        </div>
+        <a href="pages/tratamiento-wegovy.html" class="treatment-link" aria-label="Ver tratamiento Wegovy">
+          <span data-i18n="treatments.explore">Ver tratamiento</span>
+          <span class="treatment-link-icon" aria-hidden="true">↗</span>
+        </a>
+      </article>
+
+      <!-- Ozempic -->
+      <article class="treatment-card reveal reveal-delay-2">
+        <div class="flex-between">
+          <div class="treatment-icon-wrap ozempic" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+              <path d="M19 3H5C3.9 3 3 3.9 3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z" fill="rgba(75,163,91,0.9)"/>
+            </svg>
+          </div>
+          <span class="treatment-badge" data-i18n="treatments.badge">Con receta médica</span>
+        </div>
+        <div>
+          <h3 class="treatment-name" data-i18n="treatments.ozempic_title">Ozempic</h3>
+          <p class="treatment-desc" data-i18n="treatments.ozempic_desc">Mejora el control glucémico y favorece la pérdida de peso progresiva.</p>
+        </div>
+        <a href="pages/tratamiento-ozempic.html" class="treatment-link" aria-label="Ver tratamiento Ozempic">
+          <span data-i18n="treatments.explore">Ver tratamiento</span>
+          <span class="treatment-link-icon" aria-hidden="true">↗</span>
+        </a>
+      </article>
+
+      <!-- Saxenda -->
+      <article class="treatment-card reveal reveal-delay-3">
+        <div class="flex-between">
+          <div class="treatment-icon-wrap saxenda" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="rgba(163,75,91,0.9)"/>
+            </svg>
+          </div>
+          <span class="treatment-badge" data-i18n="treatments.badge">Con receta médica</span>
+        </div>
+        <div>
+          <h3 class="treatment-name" data-i18n="treatments.saxenda_title">Saxenda</h3>
+          <p class="treatment-desc" data-i18n="treatments.saxenda_desc">Controla el hambre y reduce la ingesta calórica de forma sostenida.</p>
+        </div>
+        <a href="pages/tratamiento-saxenda.html" class="treatment-link" aria-label="Ver tratamiento Saxenda">
+          <span data-i18n="treatments.explore">Ver tratamiento</span>
+          <span class="treatment-link-icon" aria-hidden="true">↗</span>
+        </a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     HOW IT WORKS
+══════════════════════════════════════ -->
+<section class="section-padding" id="como-funciona" aria-labelledby="how-title">
+  <div class="container">
+    <div class="how-wrapper">
+
+      <!-- Left: sticky info -->
+      <div class="how-left">
+        <div class="how-left-content">
+          <div class="section-tag blue">
+            <span class="dot" aria-hidden="true"></span>
+            <span data-i18n="how.tag">Proceso</span>
+          </div>
+          <h2 id="how-title" class="reveal" data-i18n="how.title">¿Cómo Funciona?</h2>
+          <p class="text-p2 text-white-60 reveal" data-i18n="how.subtitle">Un proceso claro, seguro y completamente guiado por médicos.</p>
+          <a href="pages/como-funciona.html" class="btn btn-primary reveal" style="width:fit-content" data-i18n="nav.cta">Iniciar Evaluación</a>
+        </div>
+        <div class="how-visual" aria-hidden="true">
+          <div class="how-visual-icon">🩺</div>
+        </div>
+      </div>
+
+      <!-- Right: steps -->
+      <div class="steps-list" role="list">
+        <div class="step-item active" id="step-1" role="listitem">
+          <div class="step-number" aria-label="Paso 1">1</div>
+          <div class="step-text">
+            <h3 class="step-title" data-i18n="how.step1_title">Completa tu evaluación</h3>
+            <p class="step-desc" data-i18n="how.step1_desc">Rellena nuestro cuestionario médico online en menos de 10 minutos. Incluye tu historial de salud, medicación actual y objetivos.</p>
+          </div>
+        </div>
+        <div class="step-item" id="step-2" role="listitem">
+          <div class="step-number" aria-label="Paso 2">2</div>
+          <div class="step-text">
+            <h3 class="step-title" data-i18n="how.step2_title">Revisión médica</h3>
+            <p class="step-desc" data-i18n="how.step2_desc">Un médico colegiado español revisa tu evaluación de forma personalizada y determina qué tratamiento es más adecuado para ti.</p>
+          </div>
+        </div>
+        <div class="step-item" id="step-3" role="listitem">
+          <div class="step-number" aria-label="Paso 3">3</div>
+          <div class="step-text">
+            <h3 class="step-title" data-i18n="how.step3_title">Recibe tu tratamiento</h3>
+            <p class="step-desc" data-i18n="how.step3_desc">Con tu receta médica, recoge tu medicación en la farmacia colaboradora más cercana o en tu farmacia habitual.</p>
+          </div>
+        </div>
+        <div class="step-item" id="step-4" role="listitem">
+          <div class="step-number" aria-label="Paso 4">4</div>
+          <div class="step-text">
+            <h3 class="step-title" data-i18n="how.step4_title">Seguimiento continuo</h3>
+            <p class="step-desc" data-i18n="how.step4_desc">Consultas de seguimiento periódicas con tu médico para ajustar el tratamiento y maximizar tus resultados.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     PROOF / STATS
+══════════════════════════════════════ -->
+<section class="proof-section section-padding" aria-labelledby="proof-title">
+  <div class="container">
+    <div class="proof-inner">
+      <div class="section-tag">
+        <span class="dot" aria-hidden="true"></span>
+        <span data-i18n="proof.tag">Resultados</span>
+      </div>
+      <h2 id="proof-title" class="reveal" data-i18n="proof.title">Resultados Reales de Pacientes Reales</h2>
+      <div class="proof-stats">
+        <div class="stat-item reveal">
+          <div class="stat-number"><span id="stat-patients">0</span><span>+</span></div>
+          <div class="stat-label" data-i18n="proof.stat1">Pacientes atendidos</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-1">
+          <div class="stat-number"><span id="stat-satisfaction">0</span><span>%</span></div>
+          <div class="stat-label" data-i18n="proof.stat2">Satisfacción media</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-2">
+          <div class="stat-number"><span id="stat-weight">0</span><span> kg</span></div>
+          <div class="stat-label" data-i18n="proof.stat3">Peso medio perdido en 6 meses</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-3">
+          <div class="stat-number"><span id="stat-cont">0</span><span>%</span></div>
+          <div class="stat-label" data-i18n="proof.stat4">Tasa de continuidad del tratamiento</div>
+        </div>
+      </div>
+      <a href="pages/testimonios.html" class="btn btn-outline reveal" data-i18n="proof.cta">Ver Testimonios</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     TESTIMONIALS
+══════════════════════════════════════ -->
+<section class="section-padding" id="testimonios" aria-labelledby="test-title">
+  <div class="container">
+    <div class="testimonials-header">
+      <div>
+        <div class="section-tag" style="margin-bottom:1rem">
+          <span class="dot" aria-hidden="true"></span>
+          <span data-i18n="test.tag">Testimonios</span>
+        </div>
+        <h2 id="test-title" data-i18n="test.title">Lo Que Dicen Nuestros Pacientes</h2>
+      </div>
+      <div class="testimonials-nav" role="group" aria-label="Navegación testimonios">
+        <button class="test-arrow" id="testPrev" aria-label="Testimonio anterior">‹</button>
+        <button class="test-arrow" id="testNext" aria-label="Testimonio siguiente">›</button>
+      </div>
+    </div>
+
+    <div class="testimonials-swiper" id="testimonialsSwiper" role="region" aria-label="Testimonios de pacientes">
+      <!-- Slide 1 -->
+      <div class="testimonial-slide">
+        <article class="test-card">
+          <div class="test-header">
+            <div class="test-stars" aria-label="5 estrellas">★★★★★</div>
+            <span class="test-verified" data-i18n="test.verified">Paciente verificado</span>
+          </div>
+          <blockquote class="test-quote">"Elegí MediSlim porque quería un médico de verdad revisando mi historial. Empecé con Mounjaro y llevo 3 meses perdiendo peso de forma constante. He perdido 9 kg — alrededor del 9% de mi peso inicial — y me siento apoyada en cada paso."</blockquote>
+          <div class="test-footer">
+            <div class="test-avatar" aria-hidden="true">N</div>
+            <div>
+              <div class="test-name">Nadia G.</div>
+              <div class="test-treatment">Mounjaro</div>
+              <div class="test-result">−9 kg en 3 meses</div>
+            </div>
+          </div>
+        </article>
+        <article class="test-card">
+          <div class="test-header">
+            <div class="test-stars" aria-label="5 estrellas">★★★★★</div>
+            <span class="test-verified" data-i18n="test.verified">Paciente verificado</span>
+          </div>
+          <blockquote class="test-quote">"Me preocupaba haber gastado dinero como con otros programas. Aquí fue distinto: precios claros, proceso claro. Mi médico confirmó que Mounjaro era adecuado y he perdido 13 kg en cuatro meses, más del 12% de mi peso inicial."</blockquote>
+          <div class="test-footer">
+            <div class="test-avatar" aria-hidden="true">J</div>
+            <div>
+              <div class="test-name">Javier M.</div>
+              <div class="test-treatment">Mounjaro</div>
+              <div class="test-result">−13 kg en 4 meses</div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <!-- Slide 2 -->
+      <div class="testimonial-slide" style="display:none">
+        <article class="test-card">
+          <div class="test-header">
+            <div class="test-stars" aria-label="5 estrellas">★★★★★</div>
+            <span class="test-verified" data-i18n="test.verified">Paciente verificado</span>
+          </div>
+          <blockquote class="test-quote">"No quería perder peso de forma rápida — quería algo sostenible. Tras revisar mi historial, el médico me recomendó Saxenda. He perdido alrededor del 7% de mi peso y mi apetito está mucho más controlado."</blockquote>
+          <div class="test-footer">
+            <div class="test-avatar" aria-hidden="true">P</div>
+            <div>
+              <div class="test-name">Pilar R.</div>
+              <div class="test-treatment">Saxenda</div>
+              <div class="test-result">−7% peso corporal</div>
+            </div>
+          </div>
+        </article>
+        <article class="test-card">
+          <div class="test-header">
+            <div class="test-stars" aria-label="5 estrellas">★★★★★</div>
+            <span class="test-verified" data-i18n="test.verified">Paciente verificado</span>
+          </div>
+          <blockquote class="test-quote">"Años de trabajo sedentario me habían afectado mucho. El primer mes con Wegovy vi cambios constantes. Ocho meses después, he perdido 16 kg — alrededor del 15% — y se siente sostenible."</blockquote>
+          <div class="test-footer">
+            <div class="test-avatar" aria-hidden="true">M</div>
+            <div>
+              <div class="test-name">Mónica L.</div>
+              <div class="test-treatment">Wegovy</div>
+              <div class="test-result">−16 kg en 8 meses</div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <!-- Slide 3 -->
+      <div class="testimonial-slide" style="display:none">
+        <article class="test-card">
+          <div class="test-header">
+            <div class="test-stars" aria-label="5 estrellas">★★★★★</div>
+            <span class="test-verified" data-i18n="test.verified">Paciente verificado</span>
+          </div>
+          <blockquote class="test-quote">"Antes de empezar Ozempic, quería claridad sobre qué era realista. Mi médico explicó el progreso gradual y constante, no resultados extremos. En siete meses he reducido mi peso en 11 kg, más del 10%."</blockquote>
+          <div class="test-footer">
+            <div class="test-avatar" aria-hidden="true">D</div>
+            <div>
+              <div class="test-name">David F.</div>
+              <div class="test-treatment">Ozempic</div>
+              <div class="test-result">−11 kg en 7 meses</div>
+            </div>
+          </div>
+        </article>
+        <article class="test-card">
+          <div class="test-header">
+            <div class="test-stars" aria-label="5 estrellas">★★★★★</div>
+            <span class="test-verified" data-i18n="test.verified">Paciente verificado</span>
+          </div>
+          <blockquote class="test-quote">"Quería una opción médicamente supervisada, no otra dieta. Tras mi evaluación, el médico confirmó Mounjaro. En seis meses he perdido 21 kg, alrededor del 17%, y me he sentido apoyada durante todo el proceso."</blockquote>
+          <div class="test-footer">
+            <div class="test-avatar" aria-hidden="true">E</div>
+            <div>
+              <div class="test-name">Elena S.</div>
+              <div class="test-treatment">Mounjaro</div>
+              <div class="test-result">−21 kg en 6 meses</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     BMI CALCULATOR
+══════════════════════════════════════ -->
+<section class="bmi-section section-padding" id="calculadora-imc" aria-labelledby="bmi-title">
+  <div class="container">
+    <div class="bmi-wrapper">
+
+      <!-- Left: form -->
+      <div class="bmi-left">
+        <div class="section-tag">
+          <span class="dot" aria-hidden="true"></span>
+          <span data-i18n="bmi.tag">Calculadora</span>
+        </div>
+        <h2 id="bmi-title" class="reveal" data-i18n="bmi.title">Calcula tu IMC</h2>
+        <p class="text-p2 text-white-60 reveal" data-i18n="bmi.subtitle">Descubre si eres candidato para nuestros tratamientos.</p>
+
+        <form class="bmi-form" id="bmiForm" novalidate aria-label="Calculadora de IMC">
+          <div class="bmi-inputs">
+            <div class="input-group">
+              <label class="input-label" for="bmiHeight" data-i18n="bmi.height">Altura (cm)</label>
+              <input type="number" id="bmiHeight" name="cm" class="input-field"
+                     placeholder="170" min="100" max="250" aria-describedby="bmiHeightErr"/>
+              <div class="input-error" id="bmiHeightErr" role="alert" data-i18n="bmi.error_height"></div>
+            </div>
+            <div class="input-group">
+              <label class="input-label" for="bmiWeight" data-i18n="bmi.weight">Peso (kg)</label>
+              <input type="number" id="bmiWeight" name="kg" class="input-field"
+                     placeholder="70" min="30" max="300" aria-describedby="bmiWeightErr"/>
+              <div class="input-error" id="bmiWeightErr" role="alert" data-i18n="bmi.error_weight"></div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" id="bmiBtn" data-i18n="bmi.calculate">Calcular IMC</button>
+        </form>
+      </div>
+
+      <!-- Right: visual result -->
+      <div class="bmi-right" aria-live="polite">
+        <!-- BMI Gauge SVG -->
+        <div class="bmi-gauge-wrap" aria-hidden="true">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Background circle -->
+            <circle cx="100" cy="100" r="80" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+            <!-- 4 segments (arcs) -->
+            <!-- Underweight: top-left arc -->
+            <path id="bmi-seg-0" d="M100,100 L100,20 A80,80 0 0,0 43.4,56.6 Z" class="bmi-seg-0" opacity="0.6"/>
+            <!-- Normal: top-right arc -->
+            <path id="bmi-seg-1" d="M100,100 L43.4,56.6 A80,80 0 0,0 43.4,143.4 Z" class="bmi-seg-1" opacity="0.6"/>
+            <!-- Overweight: bottom-left arc -->
+            <path id="bmi-seg-2" d="M100,100 L43.4,143.4 A80,80 0 0,0 156.6,143.4 Z" class="bmi-seg-2" opacity="0.6"/>
+            <!-- Obese: top-right arc -->
+            <path id="bmi-seg-3" d="M100,100 L156.6,143.4 A80,80 0 0,0 100,20 Z" class="bmi-seg-3" opacity="0.6"/>
+            <!-- Center circle -->
+            <circle cx="100" cy="100" r="55" fill="#281634"/>
+            <!-- Center text -->
+            <text x="100" y="95" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="rgba(255,255,255,0.6)">Tu IMC</text>
+            <text id="bmiGaugeNumber" x="100" y="118" text-anchor="middle" font-family="Inter,sans-serif" font-size="26" font-weight="800" fill="white">—</text>
+          </svg>
+        </div>
+
+        <div class="bmi-result-box" id="bmiResultBox" role="region" aria-label="Resultado del IMC">
+          <div class="bmi-result-label" data-i18n="bmi.result">Tu IMC es</div>
+          <div class="bmi-result-number" id="bmiResultNumber">—</div>
+          <div class="bmi-result-category fw-600" id="bmiResultCategory"></div>
+          <p class="bmi-result-desc text-white-60 text-center" id="bmiResultDesc"></p>
+          <a href="pages/evaluacion.html" class="btn btn-primary mt-4" id="bmiCta" style="display:none" data-i18n="bmi.cta">Iniciar Evaluación</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     FAQ
+══════════════════════════════════════ -->
+<section class="section-padding" id="faq" aria-labelledby="faq-title">
+  <div class="container">
+    <div class="faq-wrapper">
+      <div class="faq-left">
+        <div class="section-tag">
+          <span class="dot" aria-hidden="true"></span>
+          <span data-i18n="faq.tag">Preguntas frecuentes</span>
+        </div>
+        <h2 id="faq-title" data-i18n="faq.title">Tus Dudas, Resueltas</h2>
+        <p class="text-p2 text-white-60">¿No encuentras lo que buscas? <a href="pages/contacto.html" class="text-coral" style="text-decoration:underline">Contáctanos</a>.</p>
+      </div>
+      <div class="faq-list" role="list">
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a1">
+            <span data-i18n="faq.q1">¿Necesito receta para obtener el medicamento?</span>
+            <div class="faq-icon" aria-hidden="true">+</div>
+          </button>
+          <div class="faq-answer" id="faq-a1" role="region">
+            <div class="faq-answer-inner" data-i18n="faq.a1">Sí. Todos los medicamentos GLP-1 son de prescripción obligatoria en España.</div>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a2">
+            <span data-i18n="faq.q2">¿Cómo recibo la medicación?</span>
+            <div class="faq-icon" aria-hidden="true">+</div>
+          </button>
+          <div class="faq-answer" id="faq-a2" role="region">
+            <div class="faq-answer-inner" data-i18n="faq.a2">La receta se emite de forma electrónica. Puedes recoger el medicamento en cualquier farmacia española autorizada.</div>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a3">
+            <span data-i18n="faq.q3">¿Quién es el médico que me va a atender?</span>
+            <div class="faq-icon" aria-hidden="true">+</div>
+          </button>
+          <div class="faq-answer" id="faq-a3" role="region">
+            <div class="faq-answer-inner" data-i18n="faq.a3">Contamos con un médico colegiado español especializado en medicina de la obesidad.</div>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a4">
+            <span data-i18n="faq.q4">¿Cuáles son los criterios para ser elegible?</span>
+            <div class="faq-icon" aria-hidden="true">+</div>
+          </button>
+          <div class="faq-answer" id="faq-a4" role="region">
+            <div class="faq-answer-inner" data-i18n="faq.a4">Según la normativa AEMPS: IMC ≥ 30 (obesidad) o IMC ≥ 27 (sobrepeso) con comorbilidad asociada.</div>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a5">
+            <span data-i18n="faq.q5">¿Cuánto cuesta el tratamiento?</span>
+            <div class="faq-icon" aria-hidden="true">+</div>
+          </button>
+          <div class="faq-answer" id="faq-a5" role="region">
+            <div class="faq-answer-inner" data-i18n="faq.a5">La consulta médica tiene precio fijo. El coste del medicamento se abona en farmacia. Consulta nuestra página de precios.</div>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a6">
+            <span data-i18n="faq.q6">¿Con qué frecuencia tendré consultas de seguimiento?</span>
+            <div class="faq-icon" aria-hidden="true">+</div>
+          </button>
+          <div class="faq-answer" id="faq-a6" role="region">
+            <div class="faq-answer-inner" data-i18n="faq.a6">Mensualmente los primeros 3 meses, y cada 2 meses a partir de entonces.</div>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a7">
+            <span data-i18n="faq.q7">¿Es seguro comprar medicamentos online?</span>
+            <div class="faq-icon" aria-hidden="true">+</div>
+          </button>
+          <div class="faq-answer" id="faq-a7" role="region">
+            <div class="faq-answer-inner" data-i18n="faq.a7">En España, la venta online de medicamentos con receta está prohibida. Nosotros gestionamos la consulta y prescripción; tú compras en tu farmacia local.</div>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a8">
+            <span data-i18n="faq.q8">¿Puedo compatibilizar el tratamiento con otros medicamentos?</span>
+            <div class="faq-icon" aria-hidden="true">+</div>
+          </button>
+          <div class="faq-answer" id="faq-a8" role="region">
+            <div class="faq-answer-inner" data-i18n="faq.a8">El médico revisará tu medicación actual en la evaluación inicial. La valoración personalizada es imprescindible.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+</main><!-- /main -->
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+
+      <!-- Brand col -->
+      <div class="footer-brand">
+        <a href="/" class="navbar-logo" aria-label="MediSlim">
+          <svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <path d="M28 10.5C25.6 8.1 20.5 8.3 19 11.5C18 13.6 19 15.9 17.4 18.2C15.4 21.2 10.2 21.8 7.7 19.2C5 16.5 7.1 13.4 4.4 10.6C0 6.2 -7 12 -3.5 17.8C-1 21.8 3.5 18.7 6.1 22.5C7.4 24.4 6.7 26.3 7.5 28.4C9 32.4 15.3 32.8 17.5 28.8C18.8 26.5 17.5 23.7 19.9 21.5C22 19.5 24.6 20.5 26.8 19.4C30 17.8 30.7 13.1 28 10.5Z" fill="currentColor" transform="translate(12,0) scale(0.75)"/>
+            <circle cx="20" cy="5" r="4.5" fill="currentColor"/>
+          </svg>
+          <div>
+            <div class="logo-text" style="font-size:1.1rem">MediSlim</div>
+          </div>
+        </a>
+        <p class="footer-tagline text-white-60">Clínica médica online especializada en pérdida de peso con tratamientos GLP-1 bajo prescripción médica en España.</p>
+        <div class="footer-social" role="list" aria-label="Redes sociales">
+          <a href="#" class="social-link" aria-label="Facebook" role="listitem">f</a>
+          <a href="#" class="social-link" aria-label="Instagram" role="listitem">ig</a>
+          <a href="#" class="social-link" aria-label="LinkedIn" role="listitem">in</a>
+        </div>
+      </div>
+
+      <!-- Programme col -->
+      <div class="footer-col">
+        <div class="footer-col-title" data-i18n="footer.programme">Programa</div>
+        <div class="footer-links">
+          <a href="pages/como-funciona.html" class="footer-link" data-i18n="footer.how_works">Cómo funciona</a>
+          <a href="pages/tratamientos.html"  class="footer-link" data-i18n="footer.treatments">Tratamientos</a>
+          <a href="pages/precios.html"       class="footer-link" data-i18n="footer.pricing">Precios</a>
+          <a href="pages/testimonios.html"   class="footer-link" data-i18n="footer.testimonials">Testimonios</a>
+        </div>
+      </div>
+
+      <!-- Company col -->
+      <div class="footer-col">
+        <div class="footer-col-title" data-i18n="footer.company">Empresa</div>
+        <div class="footer-links">
+          <a href="pages/sobre-nosotros.html" class="footer-link" data-i18n="footer.about">Sobre Nosotros</a>
+          <a href="pages/blog.html"           class="footer-link" data-i18n="footer.blog">Blog</a>
+          <a href="pages/contacto.html"       class="footer-link" data-i18n="footer.contact">Contacto</a>
+        </div>
+        <div class="footer-col-title mt-6" data-i18n="footer.medical">Médico Responsable</div>
+        <div class="footer-links">
+          <p class="footer-link text-white-60" style="cursor:default">
+            Dr. [Nombre Médico]<br/>
+            Médico Colegiado nº 292913499 (Málaga)<br/>
+            Medicina General y Regenerativa
+          </p>
+        </div>
+      </div>
+
+      <!-- Legal col -->
+      <div class="footer-col">
+        <div class="footer-col-title" data-i18n="footer.legal">Legal</div>
+        <div class="footer-links">
+          <a href="pages/legal/aviso-legal.html"   class="footer-link" data-i18n="footer.terms">Aviso Legal</a>
+          <a href="pages/legal/privacidad.html"     class="footer-link" data-i18n="footer.privacy">Política de Privacidad</a>
+          <a href="pages/legal/cookies.html"        class="footer-link" data-i18n="footer.cookies">Política de Cookies</a>
+          <a href="pages/legal/condiciones.html"    class="footer-link" data-i18n="footer.conditions">Condiciones del Servicio</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer-bottom">
+      <p class="footer-disclaimer" data-i18n="footer.jurisdiction">
+        Ámbito de servicio: bajarpeso.es actualmente presta servicios únicamente a pacientes ubicados en España.
+      </p>
+      <p class="footer-copyright" data-i18n="footer.copyright">© 2026 · Bajar Peso · Todos los derechos reservados</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════
+     SCRIPTS
+══════════════════════════════════════ -->
+<!-- Lenis smooth scroll -->
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.23/bundled/lenis.min.js"></script>
+<!-- i18n -->
+<script src="js/i18n.js"></script>
+<!-- Main JS -->
+<script src="js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Iniciar Evaluación · MediSlim</title>
+  <meta name="description" content="Completa tu evaluación médica online gratuita y descubre si eres candidato para los tratamientos GLP-1 con MediSlim. Solo 10 minutos."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/main.css"/>
+  <link rel="stylesheet" href="../css/pages.css"/>
+</head>
+<body>
+<script>window.BASE_PATH='../';</script>
+<div id="cookie-ph"></div>
+<div id="nav-ph"></div>
+<div id="mob-ph"></div>
+
+<main>
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="section-tag orange"><span class="dot"></span><span>Evaluación Gratuita</span></div>
+      <h1>¿Soy candidato para un tratamiento GLP-1?</h1>
+      <p class="page-hero-subtitle">Responde a nuestro cuestionario médico en menos de 10 minutos. Un médico colegiado español revisará tu caso y te contactará en un plazo de 24-48 horas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="section-padding-sm">
+  <div class="container">
+    <div class="assessment-wrapper">
+
+      <!-- FORM -->
+      <form class="assessment-form" id="assessmentForm" novalidate>
+
+        <!-- Datos personales -->
+        <div class="form-section">
+          <div class="form-section-title">01 · Datos Personales</div>
+          <div class="form-row">
+            <div class="input-group">
+              <label class="input-label" for="firstName">Nombre</label>
+              <input type="text" id="firstName" class="input-field" placeholder="Tu nombre" required/>
+            </div>
+            <div class="input-group">
+              <label class="input-label" for="lastName">Apellidos</label>
+              <input type="text" id="lastName" class="input-field" placeholder="Tus apellidos" required/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="input-group">
+              <label class="input-label" for="email">Correo electrónico</label>
+              <input type="email" id="email" class="input-field" placeholder="tu@email.com" required/>
+            </div>
+            <div class="input-group">
+              <label class="input-label" for="phone">Teléfono</label>
+              <input type="tel" id="phone" class="input-field" placeholder="+34 6XX XXX XXX"/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="input-group">
+              <label class="input-label" for="birthdate">Fecha de nacimiento</label>
+              <input type="date" id="birthdate" class="input-field" required/>
+            </div>
+            <div class="input-group">
+              <label class="input-label" for="gender">Sexo</label>
+              <select id="gender" class="input-field" style="appearance:auto;cursor:pointer">
+                <option value="">Selecciona...</option>
+                <option value="f">Mujer</option>
+                <option value="m">Hombre</option>
+                <option value="o">Prefiero no especificar</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Medidas -->
+        <div class="form-section">
+          <div class="form-section-title">02 · Medidas Actuales</div>
+          <div class="form-row">
+            <div class="input-group">
+              <label class="input-label" for="heightF">Altura (cm)</label>
+              <input type="number" id="heightF" class="input-field" placeholder="170" min="100" max="250" required/>
+            </div>
+            <div class="input-group">
+              <label class="input-label" for="weightF">Peso actual (kg)</label>
+              <input type="number" id="weightF" class="input-field" placeholder="85" min="30" max="300" required/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="input-group">
+              <label class="input-label" for="targetWeight">Peso objetivo (kg)</label>
+              <input type="number" id="targetWeight" class="input-field" placeholder="70" min="30" max="300"/>
+            </div>
+            <div class="input-group">
+              <label class="input-label" for="bmiDisplay">Tu IMC (calculado automáticamente)</label>
+              <input type="text" id="bmiDisplay" class="input-field" placeholder="—" readonly style="cursor:default;opacity:0.7"/>
+            </div>
+          </div>
+        </div>
+
+        <!-- Historial médico -->
+        <div class="form-section">
+          <div class="form-section-title">03 · Historial de Salud</div>
+          <p class="text-p4 text-white-60" style="margin-bottom:0.75rem">Marca todas las condiciones que apliquen en tu caso:</p>
+          <div class="checkbox-group" style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem">
+            <label class="check-item"><input type="checkbox" name="cond" value="hta"/> Hipertensión arterial</label>
+            <label class="check-item"><input type="checkbox" name="cond" value="t2d"/> Diabetes tipo 2</label>
+            <label class="check-item"><input type="checkbox" name="cond" value="pre"/> Prediabetes</label>
+            <label class="check-item"><input type="checkbox" name="cond" value="lip"/> Dislipidemia</label>
+            <label class="check-item"><input type="checkbox" name="cond" value="osa"/> Apnea del sueño</label>
+            <label class="check-item"><input type="checkbox" name="cond" value="nash"/> Hígado graso</label>
+            <label class="check-item"><input type="checkbox" name="cond" value="pcos"/> SOP (ovario poliquístico)</label>
+            <label class="check-item"><input type="checkbox" name="cond" value="none"/> Ninguna de las anteriores</label>
+          </div>
+        </div>
+
+        <!-- Medicación actual -->
+        <div class="form-section">
+          <div class="form-section-title">04 · Medicación Actual</div>
+          <div class="input-group">
+            <label class="input-label" for="currentMeds">¿Tomas algún medicamento actualmente? (Opcional)</label>
+            <textarea id="currentMeds" class="input-field" style="resize:vertical;min-height:90px" placeholder="Escribe el nombre de los medicamentos que tomas (ej: Metformina 850mg, Atorvastatina 20mg...)"></textarea>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:0.5rem;margin-top:0.25rem">
+            <label class="check-item"><input type="checkbox" name="excl" value="panc"/> Tengo o he tenido pancreatitis</label>
+            <label class="check-item"><input type="checkbox" name="excl" value="met"/> Tengo antecedentes personales o familiares de carcinoma medular de tiroides</label>
+            <label class="check-item"><input type="checkbox" name="excl" value="preg"/> Estoy embarazada o doy el pecho</label>
+            <label class="check-item"><input type="checkbox" name="excl" value="t1d"/> Tengo diabetes tipo 1</label>
+          </div>
+          <div class="alert alert-info" style="margin-top:1rem">
+            <span>ℹ️</span>
+            <span>Las condiciones marcadas arriba pueden ser criterios de exclusión. El médico revisará tu caso individualmente.</span>
+          </div>
+        </div>
+
+        <!-- Objetivos -->
+        <div class="form-section">
+          <div class="form-section-title">05 · Tus Objetivos</div>
+          <div class="input-group">
+            <label class="input-label" for="goals">¿Cuál es tu principal objetivo?</label>
+            <select id="goals" class="input-field" style="appearance:auto;cursor:pointer">
+              <option value="">Selecciona...</option>
+              <option value="lose20">Perder más del 20% de mi peso</option>
+              <option value="lose10">Perder entre el 10% y el 20%</option>
+              <option value="lose5">Perder entre el 5% y el 10%</option>
+              <option value="maintain">Mantener mi peso actual</option>
+              <option value="health">Mejorar mi salud metabólica</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label class="input-label" for="attempts">¿Has intentado perder peso anteriormente?</label>
+            <select id="attempts" class="input-field" style="appearance:auto;cursor:pointer">
+              <option value="">Selecciona...</option>
+              <option value="diet">Sí, solo con dieta</option>
+              <option value="dietex">Sí, con dieta y ejercicio</option>
+              <option value="meds">Sí, con otros medicamentos</option>
+              <option value="multi">Sí, con múltiples enfoques</option>
+              <option value="no">No, es mi primer intento</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label class="input-label" for="comments">Comentarios adicionales para el médico (Opcional)</label>
+            <textarea id="comments" class="input-field" style="resize:vertical;min-height:90px" placeholder="Cuéntanos algo más sobre tu situación..."></textarea>
+          </div>
+        </div>
+
+        <!-- Consentimiento -->
+        <div class="form-section">
+          <div class="form-section-title">06 · Consentimiento</div>
+          <div style="display:flex;flex-direction:column;gap:0.75rem">
+            <label class="check-item" style="align-items:flex-start">
+              <input type="checkbox" id="consentPrivacy" required style="margin-top:2px"/>
+              <span style="font-size:0.875rem">He leído y acepto la <a href="../pages/legal/privacidad.html" class="text-coral" style="text-decoration:underline">Política de Privacidad</a> y las <a href="../pages/legal/condiciones.html" class="text-coral" style="text-decoration:underline">Condiciones del Servicio</a>. *</span>
+            </label>
+            <label class="check-item" style="align-items:flex-start">
+              <input type="checkbox" id="consentHealth" required style="margin-top:2px"/>
+              <span style="font-size:0.875rem">Confirmo que la información médica proporcionada es veraz y completa. Entiendo que la decisión final sobre el tratamiento la tomará el médico. *</span>
+            </label>
+            <label class="check-item" style="align-items:flex-start">
+              <input type="checkbox" id="consentComm" style="margin-top:2px"/>
+              <span style="font-size:0.875rem">Acepto recibir comunicaciones sobre mi tratamiento y el progreso del servicio. (Opcional)</span>
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="submitAssessment" style="font-size:1rem;padding:1rem 2rem">
+          Enviar Evaluación →
+        </button>
+        <p class="form-disclaimer">Al enviar este formulario, tus datos serán procesados conforme al RGPD. Los datos de salud solo son accesibles por el médico responsable. Consulta nuestra <a href="../pages/legal/privacidad.html" class="text-coral" style="text-decoration:underline">Política de Privacidad</a>.</p>
+      </form>
+
+      <!-- SIDEBAR INFO -->
+      <div style="display:flex;flex-direction:column;gap:1.5rem;position:sticky;top:100px">
+        <div class="glass-card" style="padding:1.5rem">
+          <h3 style="font-size:1rem;font-weight:600;margin-bottom:1rem">¿Qué pasa después?</h3>
+          <div style="display:flex;flex-direction:column;gap:1rem">
+            <div style="display:flex;gap:0.75rem;align-items:flex-start">
+              <div style="width:28px;height:28px;border-radius:50%;background:rgba(75,91,163,0.3);display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0">1</div>
+              <div><p style="font-size:0.875rem;font-weight:500">Revisión médica</p><p style="font-size:0.8rem;color:rgba(255,255,255,0.6)">El médico revisa tu formulario en 24-48h hábiles.</p></div>
+            </div>
+            <div style="display:flex;gap:0.75rem;align-items:flex-start">
+              <div style="width:28px;height:28px;border-radius:50%;background:rgba(75,91,163,0.3);display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0">2</div>
+              <div><p style="font-size:0.875rem;font-weight:500">Consulta de seguimiento</p><p style="font-size:0.8rem;color:rgba(255,255,255,0.6)">El médico se pone en contacto contigo para aclarar dudas.</p></div>
+            </div>
+            <div style="display:flex;gap:0.75rem;align-items:flex-start">
+              <div style="width:28px;height:28px;border-radius:50%;background:rgba(75,91,163,0.3);display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0">3</div>
+              <div><p style="font-size:0.875rem;font-weight:500">Prescripción y receta</p><p style="font-size:0.8rem;color:rgba(255,255,255,0.6)">Si eres apto, recibes la receta electrónica para la farmacia.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card" style="padding:1.5rem">
+          <h3 style="font-size:1rem;font-weight:600;margin-bottom:1rem">Criterios de Elegibilidad</h3>
+          <ul style="display:flex;flex-direction:column;gap:0.75rem">
+            <li style="display:flex;gap:0.5rem;font-size:0.875rem;color:rgba(255,255,255,0.7)"><span style="color:#81C784;flex-shrink:0">✓</span> IMC ≥ 30 (obesidad)</li>
+            <li style="display:flex;gap:0.5rem;font-size:0.875rem;color:rgba(255,255,255,0.7)"><span style="color:#81C784;flex-shrink:0">✓</span> IMC ≥ 27 con comorbilidad asociada</li>
+            <li style="display:flex;gap:0.5rem;font-size:0.875rem;color:rgba(255,255,255,0.7)"><span style="color:#81C784;flex-shrink:0">✓</span> Mayor de 18 años</li>
+            <li style="display:flex;gap:0.5rem;font-size:0.875rem;color:rgba(255,255,255,0.7)"><span style="color:#81C784;flex-shrink:0">✓</span> Sin contraindicaciones médicas</li>
+          </ul>
+          <div class="alert alert-warning" style="margin-top:1rem">
+            <span>⚠️</span>
+            <span style="font-size:0.8rem">La decisión final siempre la tomará el médico tras revisar tu caso completo.</span>
+          </div>
+        </div>
+
+        <div class="glass-card" style="padding:1.5rem">
+          <h3 style="font-size:1rem;font-weight:600;margin-bottom:0.75rem">¿Tienes dudas?</h3>
+          <p style="font-size:0.875rem;color:rgba(255,255,255,0.6);margin-bottom:1rem">Nuestro equipo está disponible para ayudarte antes de enviar el formulario.</p>
+          <a href="contacto.html" class="btn btn-outline" style="width:100%;justify-content:center">Contáctanos</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SUCCESS MESSAGE (hidden by default) -->
+<div id="successMsg" style="display:none;position:fixed;inset:0;background:rgba(40,22,52,0.95);z-index:9999;align-items:center;justify-content:center;padding:2rem">
+  <div class="glass-card" style="padding:2.5rem;max-width:460px;text-align:center;display:flex;flex-direction:column;gap:1.25rem;align-items:center">
+    <div style="font-size:2.5rem">✅</div>
+    <h2 style="font-size:1.4rem">¡Evaluación enviada con éxito!</h2>
+    <p style="color:rgba(255,255,255,0.7);font-size:0.9rem">El médico revisará tu caso en las próximas 24-48 horas hábiles.</p>
+    
+    <!-- If user is logged in -->
+    <div id="successLogged" style="display:none;width:100%">
+      <a href="portal/dashboard.html" class="btn btn-primary" style="width:100%;justify-content:center">Ir a mi Panel de Paciente</a>
+    </div>
+
+    <!-- If user is NOT logged in -->
+    <div id="successUnlogged" style="width:100%;display:flex;flex-direction:column;gap:0.75rem">
+      <p style="font-size:0.85rem;color:var(--color-coral);font-weight:600">Crea tu contraseña para acceder al portal de seguimiento y descargar tu receta:</p>
+      <form id="signupPortalForm" style="display:flex;flex-direction:column;gap:1rem;text-align:left">
+        <div class="input-group">
+          <label class="input-label" for="signupPwd" style="font-size:0.8rem">Elige una contraseña (mín. 6 caracteres)</label>
+          <input type="password" id="signupPwd" class="input-field" placeholder="••••••••" required minlength="6"/>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Registrar mi cuenta y acceder →</button>
+      </form>
+    </div>
+  </div>
+</div>
+</main>
+
+<div id="footer-ph"></div>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.23/bundled/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../js/components.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/supabase-db.js"></script>
+<script src="../js/main.js"></script>
+<script>
+// BMI auto-calc
+(function(){
+  var h = document.getElementById('heightF'), w = document.getElementById('weightF'), d = document.getElementById('bmiDisplay');
+  function calc(){ if(h.value&&w.value){ var bmi = parseFloat(w.value)/Math.pow(parseFloat(h.value)/100,2); d.value = isNaN(bmi)?'—':bmi.toFixed(1); } }
+  h.addEventListener('input',calc); w.addEventListener('input',calc);
+
+  var form = document.getElementById('assessmentForm');
+  var btn = document.getElementById('submitAssessment');
+  var evalData = null;
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var ok = true;
+    var requiredIds = ['firstName','lastName','email','birthdate','gender','heightF','weightF','goals'];
+    requiredIds.forEach(function(id){
+      var el = document.getElementById(id);
+      if(el && !el.value){ el.classList.add('error'); ok=false; }
+      else if(el){ el.classList.remove('error'); }
+    });
+
+    if(!document.getElementById('consentPrivacy').checked || !document.getElementById('consentHealth').checked){
+      ok = false;
+      alert('Debes aceptar los términos obligatorios.');
+      return;
+    }
+    if(!ok) return;
+
+    // Collect data
+    var condArr = [];
+    document.querySelectorAll('input[name="cond"]:checked').forEach(function(cb){ condArr.push(cb.value); });
+
+    var exclArr = [];
+    document.querySelectorAll('input[name="excl"]:checked').forEach(function(cb){ exclArr.push(cb.value); });
+
+    evalData = {
+      responses: {
+        nombre: document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value,
+        edad: document.getElementById('birthdate').value ? new Date().getFullYear() - new Date(document.getElementById('birthdate').value).getFullYear() : '—',
+        sexo: document.getElementById('gender').value,
+        peso: document.getElementById('weightF').value,
+        altura: document.getElementById('heightF').value,
+        objetivos: document.getElementById('goals').value,
+        intentos: document.getElementById('attempts').value,
+        medicacion: document.getElementById('currentMeds').value,
+        comentarios: document.getElementById('comments').value
+      },
+      email: document.getElementById('email').value.trim(),
+      imc: parseFloat(document.getElementById('bmiDisplay').value) || null,
+      status: 'pending',
+      user_id: null
+    };
+
+    // Disable button & show loading state
+    btn.disabled = true;
+    var origText = btn.textContent;
+    btn.textContent = 'Enviando...';
+
+    // Check if user is logged in
+    window.BajarPesoAuth.checkSession(function(err, session) {
+      if (session && session.user) {
+        evalData.user_id = session.user.id;
+      }
+      
+      // Insert into DB
+      window.BajarPesoDB.insertEvaluation(evalData, function(insertErr, result) {
+        btn.disabled = false;
+        btn.textContent = origText;
+        if (insertErr) {
+          alert('Hubo un error al enviar tu evaluación: ' + insertErr.message);
+        } else {
+          // Show success message overlay
+          var msg = document.getElementById('successMsg');
+          msg.style.display = 'flex';
+          document.body.style.overflow = 'hidden';
+
+          if (session && session.user) {
+            document.getElementById('successLogged').style.display = 'block';
+            document.getElementById('successUnlogged').style.display = 'none';
+          } else {
+            document.getElementById('successLogged').style.display = 'none';
+            document.getElementById('successUnlogged').style.display = 'block';
+          }
+        }
+      });
+    });
+  });
+
+  // Handle signup inside success popup
+  document.getElementById('signupPortalForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var password = document.getElementById('signupPwd').value;
+    if (password.length < 6) return;
+
+    var signupBtn = e.target.querySelector('button[type="submit"]');
+    signupBtn.disabled = true;
+    signupBtn.textContent = 'Registrando...';
+
+    var fName = document.getElementById('firstName').value;
+    var lName = document.getElementById('lastName').value;
+
+    window.BajarPesoAuth.signUp(evalData.email, password, fName, lName, function(signUpErr, user) {
+      if (signUpErr) {
+        signupBtn.disabled = false;
+        signupBtn.textContent = 'Registrar mi cuenta y acceder →';
+        alert('Error al registrar cuenta: ' + signUpErr.message);
+      } else {
+        // Link the just created evaluation to the new user ID
+        window.BajarPesoAuth.getClient().from('evaluations')
+          .update({ user_id: user.id })
+          .eq('email', evalData.email)
+          .then(function() {
+            // Auto login and redirect
+            window.location.href = 'portal/dashboard.html';
+          });
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
