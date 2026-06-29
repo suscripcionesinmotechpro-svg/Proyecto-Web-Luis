@@ -564,7 +564,7 @@ h6 { font-size: 0.875rem; font-weight: 600; color: var(--color-primary); }
 .hero-bg img {
   width: 100%; height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: right center; /* Focuses on the doctor on the right side */
 }
 .hero-bg::after {
   content: '';
@@ -572,7 +572,7 @@ h6 { font-size: 0.875rem; font-weight: 600; color: var(--color-primary); }
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(255,255,255,0.94) 0%,
+    rgba(255,255,255,0.96) 0%,
     rgba(255,255,255,0.65) 45%,
     rgba(255,255,255,0.1) 75%,
     rgba(255,255,255,0) 100%
@@ -583,7 +583,7 @@ h6 { font-size: 0.875rem; font-weight: 600; color: var(--color-primary); }
   inset: 0;
   background: var(--gradient-hero);
   mix-blend-mode: overlay;
-  opacity: 0.22; /* Reduced opacity to allow high brightness and sharp details of the clinic photo */
+  opacity: 0.08; /* Super bright: allow maximum color, light and details of the doctor to shine through */
 }
 
 .hero-content {
