@@ -9,25 +9,27 @@
 /* ── Variables ── */
 :root {
   /* Colors */
-  --color-dark:        #281634;
-  --color-dark-80:     rgba(40, 22, 52, 0.8);
-  --color-dark-60:     rgba(40, 22, 52, 0.6);
+  --color-dark:        #FFFFFF; /* Fondo principal blanco */
+  --color-dark-80:     rgba(255, 255, 255, 0.96);
+  --color-dark-60:     rgba(255, 255, 255, 0.8);
+  --color-primary:     #21153B; /* Púrpura oscuro del logo */
+  --color-primary-rgb: 33, 21, 59;
   --color-blue:        #4B5BA3;
   --color-blue-light:  #6B7BC3;
   --color-coral:       #FFBE9C;
   --color-coral-light: #FFD4B8;
-  --color-white:       #FFFFFF;
-  --color-white-60:    rgba(255,255,255,0.6);
-  --color-white-20:    rgba(255,255,255,0.2);
-  --color-white-10:    rgba(255,255,255,0.1);
-  --color-white-08:    rgba(255,255,255,0.08);
+  --color-white:       #21153B; /* Texto principal oscuro */
+  --color-white-60:    #6D6280; /* Texto secundario gris púrpura */
+  --color-white-20:    rgba(33, 21, 59, 0.16); /* Bordes y divisores */
+  --color-white-10:    rgba(33, 21, 59, 0.08);
+  --color-white-08:    rgba(33, 21, 59, 0.04);
 
   /* Gradients */
-  --gradient-hero:    linear-gradient(135deg, rgba(75,91,163,0.15) 0%, rgba(255,190,156,0.15) 100%);
-  --gradient-card:    linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.04) 100%);
+  --gradient-hero:    linear-gradient(135deg, rgba(75,91,163,0.06) 0%, rgba(255,190,156,0.06) 100%);
+  --gradient-card:    linear-gradient(135deg, rgba(33, 21, 59, 0.03) 0%, rgba(33, 21, 59, 0.01) 100%);
   --gradient-blue:    linear-gradient(135deg, #4B5BA3 0%, #6B7BC3 100%);
   --gradient-coral:   linear-gradient(135deg, #FFBE9C 0%, #FFD4B8 100%);
-  --gradient-dark:    linear-gradient(180deg, rgba(40,22,52,0) 0%, #281634 100%);
+  --gradient-dark:    linear-gradient(180deg, rgba(255,255,255,0) 0%, #FFFFFF 100%);
 
   /* Typography */
   --font-family:      'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -86,6 +88,22 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 5%;
+  right: -10%;
+  width: 50vw;
+  height: 50vw;
+  max-width: 600px;
+  max-height: 600px;
+  background-image: url("data:image/svg+xml,%3Csvg width='42' height='42' viewBox='0 0 42 42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40.0326 14.55C37.2618 11.786 31.1713 12.0833 29.352 15.7964C28.1391 18.2683 29.2213 20.9541 27.3758 23.7337C25.0076 27.306 18.7551 28.0674 15.634 25.0687C12.2934 21.8563 14.8237 18.0754 11.4778 14.6126C6.06699 9.02204 -3.155 15.9841 1.07959 22.8993C4.0438 27.7493 9.74219 23.9006 13.0253 28.7141C14.6303 31.0661 13.8565 33.3659 14.7557 35.8535C16.5907 40.959 24.1973 41.4962 26.8374 36.7505C28.4423 33.8613 26.7955 30.508 29.8068 27.718C32.4051 25.3086 35.6045 26.4664 38.2603 25.1991C42.2178 23.3113 43.1065 17.6112 40.0326 14.5448V14.55Z' fill='%2321153B'/%3E%3Cpath d='M20.9769 11.2019C24.0779 11.2019 26.5917 8.69429 26.5917 5.60097C26.5917 2.50764 24.0779 0 20.9769 0C17.876 0 15.3622 2.50764 15.3622 5.60097C15.3622 8.69429 17.876 11.2019 20.9769 11.2019Z' fill='%2321153B'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.025;
+  pointer-events: none;
+  z-index: -1;
 }
 
 body.no-scroll {
@@ -210,6 +228,7 @@ h6 { font-size: 0.875rem; font-weight: 600; }
 }
 .btn-primary:hover {
   background: var(--color-coral);
+  color: #21153B;
   transform: translateY(-1px);
   box-shadow: var(--shadow-md);
 }
@@ -262,10 +281,10 @@ h6 { font-size: 0.875rem; font-weight: 600; }
               box-shadow var(--duration-base) var(--ease-smooth);
 }
 .navbar.scrolled {
-  background: rgba(40,22,52,0.95);
+  background: var(--color-dark-80);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  box-shadow: 0 1px 0 var(--color-white-10);
+  box-shadow: 0 1px 0 var(--color-white-20);
 }
 .navbar-inner {
   display: flex;
@@ -446,7 +465,7 @@ h6 { font-size: 0.875rem; font-weight: 600; }
 .mobile-menu-btn span {
   display: block;
   width: 22px; height: 1.5px;
-  background: var(--color-dark);
+  background: var(--color-white);
   border-radius: 2px;
   transition: all var(--duration-base) var(--ease-smooth);
 }
@@ -539,9 +558,9 @@ h6 { font-size: 0.875rem; font-weight: 600; }
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(40,22,52,0.92) 0%,
-    rgba(40,22,52,0.75) 50%,
-    rgba(40,22,52,0.3) 100%
+    rgba(255,255,255,0.95) 0%,
+    rgba(255,255,255,0.8) 50%,
+    rgba(255,255,255,0.2) 100%
   );
 }
 .hero-bg-overlay {
