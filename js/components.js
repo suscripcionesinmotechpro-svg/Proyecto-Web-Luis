@@ -121,7 +121,7 @@
     '        <a href="' + BP + 'index.html" class="navbar-logo">',
     '          <img src="' + BP + 'assets/images/logo.png" alt="Bajar Peso Clinic Logo" style="height: 44px; width: auto; object-fit: contain;">',
     '        </a>',
-    '        <p class="footer-tagline text-white-60">Clínica médica online especializada en pérdida de peso con tratamientos GLP-1 bajo prescripción médica en España (bajarpeso.es).</p>',
+    '        <p class="footer-tagline text-white-60" data-i18n="footer.tagline">Clínica médica online especializada en pérdida de peso con tratamientos GLP-1 bajo prescripción médica en España (bajarpeso.es).</p>',
     '        <div class="footer-social"><a href="#" class="social-link" aria-label="Facebook">f</a><a href="#" class="social-link" aria-label="Instagram">ig</a><a href="#" class="social-link" aria-label="LinkedIn">in</a></div>',
     '      </div>',
     '      <div class="footer-col">',
