@@ -277,14 +277,13 @@ h6 { font-size: 0.875rem; font-weight: 600; color: var(--color-primary); }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  transition: background var(--duration-base) var(--ease-smooth),
-              box-shadow var(--duration-base) var(--ease-smooth);
+  background: #FFFFFF;
+  box-shadow: 0 2px 15px rgba(40, 49, 82, 0.05), 0 1px 0 rgba(40, 49, 82, 0.06);
+  transition: all var(--duration-base) var(--ease-smooth);
 }
 .navbar.scrolled {
-  background: var(--color-dark-80);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  box-shadow: 0 1px 0 var(--color-white-20);
+  background: #FFFFFF;
+  box-shadow: 0 4px 20px rgba(40, 49, 82, 0.08), 0 1px 0 rgba(40, 49, 82, 0.06);
 }
 .navbar-inner {
   display: flex;
